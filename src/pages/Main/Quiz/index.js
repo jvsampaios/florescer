@@ -5,8 +5,11 @@ import {
     Image,
     Row,
     Col,
+    Button
 } from 'antd';
 import './styles.css'
+import { ArrowRightOutlined } from '@ant-design/icons';
+import "antd/dist/antd.css";
 import personagem from "../../../assets/imagem-personagem1.png";
 
 const { Title, Text } = Typography;
@@ -35,9 +38,18 @@ const Quiz = () => (
                             <Text>Olá, eu sou a especialista Flora.</Text>
                         </Col>
                     </Row>
-                    <Row className='container_step' style={{padding:'0, 10px', textAlign:'justify'}}>
+                    <Row className='container_step' style={{ padding: '0 15px', textAlign: 'justify' }}>
                         <Col>
                             <Text>Sei que existem inúmeras espécies de plantas disponíveis para cultivo e por isso pode ser complicado saber quais são as mais apropriadas para o seu perfil.</Text>
+                        </Col>
+                    </Row>
+                    <Row className='container_step' style={{justifyContent:'end'}}>
+                        <Col>
+                            <Button type='link' style={{color:'#6D7970'}}>
+                                Avançar
+                                <ArrowRightOutlined />
+                            </Button>
+
                         </Col>
                     </Row>
                 </Row>
