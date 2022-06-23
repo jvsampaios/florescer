@@ -1,10 +1,10 @@
 import React from 'react';
 
-import PaginaInicial from './Pagina-Inicial';
+import Quiz from './Quiz';
 
 function Main() {
   return (
-    <PaginaInicial/>
+    <Quiz/>
   );
 }
 
