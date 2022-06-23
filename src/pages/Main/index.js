@@ -1,12 +1,12 @@
 import React from 'react';
 
-import PaginaInicial from './Pagina-Inicial';
+import Quiz from './Quiz';
 import MenuComponent from '../../components/MenuComponent';
 
 function Main() {
   return (
     <div>
-    <PaginaInicial/>
+    <Quiz/>
     <MenuComponent/>  
     </div>
   );
