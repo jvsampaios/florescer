@@ -49,7 +49,7 @@ const PaginaInicial = () => (
                                         color: '#6D7970',
                                     }}
                                 >
-                                    Cadastar
+                                    Cadastro
                                 </Button>
                             </Link>
                         </Col>

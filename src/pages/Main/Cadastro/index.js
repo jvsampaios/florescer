@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import {
     Layout,
@@ -15,8 +15,8 @@ import "antd/dist/antd.css";
 import "../../../fonts/HKGrotesk-Bold.otf";
 import "../../../fonts/HKGrotesk-Regular.otf";
 import "../../../fonts/HKGrotesk-Medium.otf";
+import { useAuthentication } from "../../../hooks/useAuthentication";
 
-import { userAuthentication } from "../../../hooks/userAuthentication";
 
 const { Title, Text } = Typography;
 const { Content } = Layout;
@@ -28,12 +28,15 @@ const PaginaInicial = () => {
     const [displayName, setDisplayName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [error, setError] = useState("");
 
-    const { createUser, error: authError, loading } = userAuthentication();
+
+    const { createUser, error: authError, loading } = useAuthentication();
 
     const handleSubmit = async (e) => {
 
         e.preventDefault();
+        setError("");
 
         const user = {
             displayName,
@@ -43,9 +46,16 @@ const PaginaInicial = () => {
 
           const res = await createUser(user);
 
-          console.log(res);
+            console.log(res);
+
           console.log(user);
 };
+
+useEffect(() => {
+    if (authError) {
+      setError(authError);
+    }
+  }, [authError]);
 
 
 return(
@@ -81,7 +91,7 @@ return(
 
                                 }}
                             >
-                                Cadastar
+                                Cadastro
                             </Button>
                         </Col>
                     </Row>
@@ -119,6 +129,7 @@ return(
                                     height: '3rem',
                                     boxShadow: '1px 3px 3px 1px #EA7E84',
                                     fontSize: '1.2rem',
+                                    color: 'white',
                                 }}
                             >
                                 Cadastrar
@@ -127,6 +138,7 @@ return(
                     </div>
                     </form>
                     <Row className='container_item' >
+                    {error && <p className="error">{error}</p>}
                         <Col>
                             <Text style={{ fontSize: '1rem', fontWeight: 'ligther', color: '#6D7970' }}>Já tem uma conta?</Text>
                             <Link to='/login'>
