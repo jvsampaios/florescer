@@ -57,7 +57,7 @@ useEffect(() => {
     }
   }, [authError]);
 
-
+ 
 return(
     <Layout className="layout">
         <Title level={2} className='titulo'>Junte-se ao aplicativo mais completo sobre plantas!</Title>
