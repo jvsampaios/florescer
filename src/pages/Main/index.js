@@ -1,12 +1,12 @@
 import React from 'react';
 
-import Quiz from './Quiz';
+import Login from './Login';
 import MenuComponent from '../../components/MenuComponent';
 
 function Main() {
   return (
     <div>
-    <Quiz/>
+    <Login/>
     <MenuComponent/>  
     </div>
   );

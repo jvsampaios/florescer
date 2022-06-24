@@ -31,7 +31,7 @@ const steps = [
                     />
                 </Col>
             </Row>
-            <Row className='container_step'>
+            <Row className='container_step' style={{alignContent:'center'}}>
                 <Col>
                     <Text>Olá, eu sou a especialista Flora.</Text>
                 </Col>
@@ -65,7 +65,8 @@ const steps = [
                 </Col>
             </Row>
 
-        </Row>,
+        </Row>
+        ,
     },
 ];
 
@@ -81,7 +82,7 @@ const Quiz = () => {
     };
     return (
         <Layout className="layout">
-            <Row className='container_step' style={{ justifyContent: 'flex-start' }}>
+            <Row className='container_step' style={{ justifyContent: 'flex-start'}}>
                 <Col>
                     <Button type='link' style={{ color: '#6D7970' }} onClick={() => prev()}>
                         <ArrowLeftOutlined style={{ fontSize: '26px' }} />
@@ -89,12 +90,12 @@ const Quiz = () => {
                 </Col>
             </Row>
             <Title className='titulo'>Quiz</Title>
-            <Content className="site-layout-content">
+            <Content className="site-layout-content" style={{display:'block'}}>
                 {steps[current].content}
                 <div>
 
                     {current < steps.length - 1 && (
-                        <Row className='container_step' style={{ justifyContent: 'end' }}>
+                        <Row className='container_step' style={{ alignContent: 'end' }}>
                             <Col>
                                 <Button type='link' style={{ color: '#6D7970', fontSize:'1rem' }} onClick={() => next()}>
                                     Avançar
@@ -105,7 +106,7 @@ const Quiz = () => {
                         </Row>
                     )}
                     {current === steps.length - 1 && (
-                        <Row className='container_step' style={{ justifyContent: 'center' }}>
+                        <Row className='container_step' style={{ alignContent: 'center' }}>
                             <Col>
                                 <Button
                                     type="primary"
@@ -116,6 +117,7 @@ const Quiz = () => {
                                         width: '13rem',
                                         height: '3rem',
                                         boxShadow: '1px 3px 3px 1px #EA7E84',
+                                        fontSize: '1.2rem',
                                     }}
                                 >
                                     Começar Quiz

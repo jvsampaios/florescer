@@ -10,6 +10,8 @@ import cardRosa from "../../../assets/card-rosa.svg";
 import cardverde from "../../../assets/card-verde.svg";
 import cardRosaMini from "../../../assets/card-mini-rosa.svg";
 import cardRosamini from "../../../assets/card-mini-rosa2.svg";
+import cardVerdeMini1 from "../../../assets/card-mini-verde1.png";
+import cardVerdemini2 from "../../../assets/card-mini-verde2.png";
 import './styles.css'
 
 const { Title, Text } = Typography;
@@ -17,19 +19,19 @@ const { Content } = Layout;
 
 const PaginaInicial = () => (
     <Layout className="layout">
-        <Title className='titulo'>Página Inicial</Title>
+        <Title className='titulo'>Florescer</Title>
         <Content className="site-layout-content">
             <div>
                 <Row className='container_step'>
                     <Row className='container_item'>
                         <Col>
                             <div className="site-card-border-less-wrapper">
-                                <Card className="card-style" bordered={false} style={{ width: "85vw", height: "15vh", backgroundImage: `url(${cardRosa})`, backgroundSize: "102vw, 2vh, contain", color: "FFFFFF" }}>
+                                <Card className="card-style" bordered={false} style={{ width: "85vw", height: "15vh", backgroundImage: `url(${cardRosa})`, backgroundSize: "102vw, 2vh, contain", color: "FFFFFF", margin: '10px 0px 30px 0'  }}>
                                     <Title className="" level={3} style={{ color: "#FFFFFF", margin: "0 0 6vh" }}>Catálogo</Title>
                                     <Text style={{ color: "#FFFFFF", margin: "0 0 2vh" }}>Vasculhe alguns tipos de plantas</Text>
                                 </Card>
 
-                                <Card className="card-style" bordered={false} style={{ width: "85vw", height: "15vh", backgroundImage: `url(${cardverde})`, backgroundSize: "102vw, 2vh, contain", color: "FFFFFF" }}>
+                                <Card className="card-style" bordered={false} style={{ width: "85vw", height: "15vh", backgroundImage: `url(${cardverde})`, backgroundSize: "102vw, 2vh, contain", color: "FFFFFF", margin: '10px 0px 30px 0' }}>
                                     <Title className="" level={3} style={{ color: "#FFFFFF", margin: "0 0 6vh" }}>Minhas Plantas</Title>
                                     <Text style={{ color: "#FFFFFF", margin: "0 0 2vh" }}>Cuide, analise e conheça mais suas plantas</Text>
                                 </Card>
@@ -73,7 +75,7 @@ const PaginaInicial = () => (
                     <Row className='container_item' style={{margin:'0',  marginBottom: '1rem'}}>
                         <Col>
                             <div className="site-card-border-less-wrapper">
-                                <Card className="card-style" bordered={false} style={{ width: "85vw", height: "15vh", backgroundImage: `url(${cardRosa})`, backgroundSize: "102vw, 2vh, contain", color: "FFFFFF" }}>
+                                <Card className="card-style" bordered={false} style={{  width: "85vw", height: "15vh", backgroundImage: `url(${cardRosa})`, backgroundSize: "102vw, 2vh, contain", color: "FFFFFF" }}>
                                     <Title className="" level={3} style={{ color: "#FFFFFF", margin: "0 0 6vh" }}>Quiz</Title>
                                     <Text style={{ color: "#FFFFFF", margin: "0 0 2vh" }}>Descubra qual a melhor planta para a sua casa</Text>
                                 </Card>
@@ -87,13 +89,13 @@ const PaginaInicial = () => (
                     </Row>
                     <Row className='container_item'>
                         <Col>
-                            <Card className="card-style" bordered={false} style={{ width: "22vw", height: "16vh", backgroundColor: "#9BD199", margin: '0px 7px 0px 33px' }}>
+                            <Card className="card-style" bordered={false} style={{ width: "30vw", height: "19vh",backgroundImage: `url(${cardVerdeMini1})`, backgroundSize: "30vw, 2vh, contain", }}>
                                 <br />
                             </Card>
-                            <Card className="card-style" bordered={false} style={{ width: "22vw", height: "16vh", backgroundColor: "#9BD199", margin: '0px 7px 0px 33px' }}>
+                            <Card className="card-style" bordered={false} style={{ width: "30vw", height: "19vh", backgroundImage: `url(${cardVerdemini2})`, backgroundSize: "30vw, 2vh, contain", }}>
                                 <br />
                             </Card>
-                            <Card className="card-style" bordered={false} style={{ width: "22vw", height: "16vh", backgroundColor: "#9BD199", margin: '0px 7px 0px 33px' }}>
+                            <Card className="card-style" bordered={false} style={{ width: "30vw", height: "19vh", backgroundImage: `url(${cardVerdeMini1})`, backgroundSize: "30vw, 2vh, contain", }}>
                                 <br />
                             </Card>
                         </Col>
