@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import "../fonts/HKGrotesk-Bold.otf";
+import "../fonts/HKGrotesk-Regular.otf";
+import "../fonts/HKGrotesk-Medium.otf";
 import { ThemeProvider } from 'styled-components';
 
 const theme = {
@@ -42,7 +44,7 @@ const theme = {
     link: '#3498db',
 
   },
-  fonts: ['Open Sans', 'Arial', 'Helvetica', 'sans-serif'].join(','),
+  fonts: [''].join(','),
   fontSizes: {
     small: '.8rem',
     normal: '1.2rem',
