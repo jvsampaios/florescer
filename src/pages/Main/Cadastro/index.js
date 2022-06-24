@@ -20,7 +20,7 @@ const { Content } = Layout;
 
 const PaginaInicial = () => (
     <Layout className="layout">
-        <Title level={2} className='titulo'>Bem-vindo ao Florescer</Title>
+        <Title level={2} className='titulo'>Junte-se ao aplicativo mais completo sobre plantas!</Title>
         <Content className="site-layout-content">
             <div>
                 <Row className='container_step'>
