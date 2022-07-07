@@ -42,7 +42,7 @@ export default function Routes() {
         <Route exact path="/" component={Main}/>
         <Route path="/cadastro" component={user ? PaginaInicial : Cadastro}/>
         <Route path="/login" component={user ? PaginaInicial : Login}/>   
-        <Route path="/pagina inicial" component={user ? PaginaInicial : Cadastro}/>
+        <Route path="/pagina inicial" component={user ? PaginaInicial : Login}/>
         <Route path='/quiz' component={user ? Quiz : Cadastro}/>
         <Route path='/catalogo' component={Catalogo}/>
         <Route path='/minhas plantas' component={MinhasPlantas}/>

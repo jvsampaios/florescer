@@ -6,9 +6,7 @@ import {
     Row,
     Col,
     Image,
-    
 } from 'antd';
-
 import { Link } from 'react-router-dom';
 import cardRosa from "../../../assets/card-rosa.png";
 import cardverde from "../../../assets/card-verde.png";
@@ -21,27 +19,30 @@ import minhasPlantasIcon from "../../../assets/minhas-plantas-icon.svg";
 import quizIcon from "../../../assets/quiz-icon.svg";
 import logoutIcon from "../../../assets/logout-icon.svg";
 import './styles.css'
+
 import { useAuthValue } from '../../../context/AuthContext';
 import { useAuthentication } from '../../../hooks/useAuthentication';
+
 const { Title, Text } = Typography;
 const { Content } = Layout;
 
-
-
 const PaginaInicial = () => {
+
     const { user } = useAuthValue();
     const { logout } = useAuthentication();
-console.log(user)
+    console.log(user)
 
-    return(
+    return (
     <Layout className="layout">
-        <Image
+        <Link to='/login'>
+            <Image
                 src={logoutIcon}
                 preview={false}
                 className='icon-card'
                 style={{ width: '1.5rem' }} onClick={logout}
             />
-       <Title className='titulo'>Florescer</Title>
+        </Link>
+        <Title className='titulo'>Florescer</Title>
         <Content className="site-layout-content">
             <div>
                 <Row className='container_step'>
@@ -163,4 +164,3 @@ console.log(user)
 
 
 export default PaginaInicial;
-
