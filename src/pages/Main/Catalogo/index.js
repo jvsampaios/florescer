@@ -9,7 +9,7 @@ import {
     Image,
     Card
 } from 'antd';
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import './styles.css'
 import { ArrowLeftOutlined, SearchOutlined } from '@ant-design/icons';
 import cactus from "../../../assets/cacto.png";
@@ -54,19 +54,21 @@ const Catalogo = () => {
                     </Row>
                     <Row className='container_item' style={{ alignContent: 'center' }}>
                         <Col>
-                            <Card className="card-catalogo-style" bordered={false} style={{ backgroundImage: `url(${cardVerde})`, color: "FFFFFF", margin: '10px 0px 0px 0' }}>
+                            <Link to='/planta'>
+                                <Card className="card-catalogo-style" bordered={false} style={{ backgroundImage: `url(${cardVerde})`, color: "FFFFFF", margin: '10px 0px 0px 0' }}>
 
-                                <Image
-                                    src={minhasPlantasIcon}
-                                    preview={false}
-                                    className='icon-catalogo'
-                                />
-                                <Image
-                                    src={cactus}
-                                    preview={false}
-                                    className='img-catalogo'
-                                />
-                            </Card>
+                                    <Image
+                                        src={minhasPlantasIcon}
+                                        preview={false}
+                                        className='icon-catalogo'
+                                    />
+                                    <Image
+                                        src={cactus}
+                                        preview={false}
+                                        className='img-catalogo'
+                                    />
+                                </Card>
+                            </Link>
                             <Card className="card-catalogo-style" bordered={false} style={{ backgroundImage: `url(${cardVerde})`, color: "FFFFFF", margin: '10px 0px 0px 0' }}>
                                 <Image
                                     src={minhasPlantasIcon}

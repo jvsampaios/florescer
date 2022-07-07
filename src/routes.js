@@ -8,6 +8,7 @@ import PaginaInicial from './pages/Main/Pagina-Inicial';
 import Quiz from './pages/Main/Quiz';
 import Catalogo from './pages/Main/Catalogo';
 import MinhasPlantas from './pages/Main/Minhas-Plantas';
+import Planta from './pages/Main/Planta';
 
 
 export default function Routes() {
@@ -21,6 +22,7 @@ export default function Routes() {
         <Route path='/quiz' component={Quiz}/>
         <Route path='/catalogo' component={Catalogo}/>
         <Route path='/minhas plantas' component={MinhasPlantas}/>
+        <Route path='/planta' component={Planta}/>
       </Switch>
     </Router>
   );
