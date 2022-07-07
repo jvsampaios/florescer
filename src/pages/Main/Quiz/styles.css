@@ -1,7 +1,13 @@
 @import '~antd/dist/antd.css';
+
 .titulo {
     color: #6D7970 !important;
     text-align: center;
+}
+
+.img-personagem {
+    width: 20rem;
+    margin-bottom: 1rem;
 }
 
 .container_item {
@@ -33,6 +39,12 @@
     background-color: white; */
 }
 
-.ant-layout{
+.ant-layout {
     background: #F6F6F6 !important;
+}
+
+@media (max-width: 384px){
+    .img-personagem{
+        width: 17rem;
+    }
 }

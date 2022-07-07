@@ -12,6 +12,8 @@ import Login from './pages/Main/Login';
 import Cadastro from './pages/Main/Cadastro';
 import PaginaInicial from './pages/Main/Pagina-Inicial';
 import Quiz from './pages/Main/Quiz';
+import Catalogo from './pages/Main/Catalogo';
+import MinhasPlantas from './pages/Main/Minhas-Plantas';
 
 // context
 import { AuthProvider } from "./context/AuthContext";
@@ -42,6 +44,8 @@ export default function Routes() {
         <Route path="/login" component={user ? PaginaInicial : Login}/>   
         <Route path="/pagina inicial" component={user ? PaginaInicial : Cadastro}/>
         <Route path='/quiz' component={user ? Quiz : Cadastro}/>
+        <Route path='/catalogo' component={Catalogo}/>
+        <Route path='/minhas plantas' component={MinhasPlantas}/>
       </Switch>
     </Router>
     </AuthProvider>
