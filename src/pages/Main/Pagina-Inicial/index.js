@@ -5,111 +5,152 @@ import {
     Card,
     Row,
     Col,
+    Image,
 } from 'antd';
-import cardRosa from "../../../assets/card-rosa.svg";
-import cardverde from "../../../assets/card-verde.svg";
-import cardRosaMini from "../../../assets/card-mini-rosa.svg";
-import cardRosamini from "../../../assets/card-mini-rosa2.svg";
+import { Link } from 'react-router-dom';
+import cardRosa from "../../../assets/card-rosa.png";
+import cardverde from "../../../assets/card-verde.png";
+import cardVerdeMini3 from "../../../assets/card-mini-verde3.png";
+import cardVerdeMini4 from "../../../assets/card-mini-verde4.png";
+import cardVerdeMini1 from "../../../assets/card-mini-verde1.png";
+import cardVerdemini2 from "../../../assets/card-mini-verde2.png";
+import catalogoIcon from "../../../assets/catalogo-icon.svg";
+import minhasPlantasIcon from "../../../assets/minhas-plantas-icon.svg";
+import quizIcon from "../../../assets/quiz-icon.svg";
+import logoutIcon from "../../../assets/logout-icon.svg";
 import './styles.css'
+
+import { useAuthValue } from '../../../context/AuthContext';
+import { useAuthentication } from '../../../hooks/useAuthentication';
 
 const { Title, Text } = Typography;
 const { Content } = Layout;
 
-const PaginaInicial = () => (
+const PaginaInicial = () => {
+
+    const { user } = useAuthValue();
+    const { logout } = useAuthentication();
+    console.log(user)
+
+    return (
     <Layout className="layout">
-        <Title className='titulo'>Página Inicial</Title>
+        <Link to='/login'>
+            <Image
+                src={logoutIcon}
+                preview={false}
+                className='icon-card'
+                style={{ width: '1.5rem' }} onClick={logout}
+            />
+        </Link>
+        <Title className='titulo'>Florescer</Title>
         <Content className="site-layout-content">
             <div>
                 <Row className='container_step'>
                     <Row className='container_item'>
                         <Col>
                             <div className="site-card-border-less-wrapper">
-                                <Card className="card-style" bordered={false} style={{ width: "85vw", height: "15vh", backgroundImage: `url(${cardRosa})`, backgroundSize: "102vw, 2vh, contain", color: "FFFFFF" }}>
-                                    <Title className="" level={3} style={{ color: "#FFFFFF", margin: "0 0 6vh" }}>Catálogo</Title>
-                                    <Text style={{ color: "#FFFFFF", margin: "0 0 2vh" }}>Vasculhe alguns tipos de plantas</Text>
-                                </Card>
-
-                                <Card className="card-style" bordered={false} style={{ width: "85vw", height: "15vh", backgroundImage: `url(${cardverde})`, backgroundSize: "102vw, 2vh, contain", color: "FFFFFF" }}>
-                                    <Title className="" level={3} style={{ color: "#FFFFFF", margin: "0 0 6vh" }}>Minhas Plantas</Title>
-                                    <Text style={{ color: "#FFFFFF", margin: "0 0 2vh" }}>Cuide, analise e conheça mais suas plantas</Text>
-                                </Card>
+                                <Link to='/catalogo'>
+                                    <Card className="card-style" bordered={false} style={{ backgroundImage: `url(${cardRosa})`, color: "FFFFFF", margin: '10px 0px 0px 0' }}>
+                                        <Image
+                                            src={catalogoIcon}
+                                            preview={false}
+                                            className='icon-card'
+                                        />
+                                        <Title className="card-title" level={3} style={{ color: "#FFFFFF" }}>Catálogo</Title>
+                                        <Text className="descricao-card" style={{ color: "#FFFFFF" }}>Vasculhe alguns tipos de plantas</Text>
+                                    </Card>
+                                </Link>
+                                <Link to='/minhas plantas'><Card className="card-style" bordered={false} style={{ backgroundImage: `url(${cardverde})`, color: "FFFFFF", margin: '10px 0px 0px 0' }}>
+                                    <Image
+                                        src={minhasPlantasIcon}
+                                        preview={false}
+                                        className='icon-card'
+                                    />
+                                    <Title className="card-title" level={3} style={{ color: "#FFFFFF" }}>Minhas Plantas</Title>
+                                    <Text className="descricao-card" style={{ color: "#FFFFFF" }}>Cuide, analise e conheça mais suas plantas</Text>
+                                </Card></Link>
 
                             </div>
                         </Col>
                     </Row>
-                    <Row className='container_item'  style={{ textAlign: "left"}}>
+                    <Row className='container_item' style={{ margin: 0, justifyContent: 'start' }}>
                         <Col>
                             <Title level={2} className='titulo' style={{ textAlign: "left", marginLeft: '2rem', marginBottom: '1rem' }}>Plantas Mais Comuns</Title>
                         </Col>
                     </Row>
-                    <Row className='container_item' style={{margin:'0'}}>
+                    <Row className='container_item' style={{ margin: '0' }}>
                         <Col>
-                            <Card className="card-style" bordered={false} style={{ width: "30vw", height: "19vh", backgroundImage: `url(${cardRosaMini})`, backgroundSize: "30vw, 2vh, contain", color: "FFFFFF", backgroundRepeat: 'no-repeat',  margin: '0' }}>
+                            <Card className="card-mini" bordered={false} style={{ backgroundImage: `url(${cardVerdeMini3})`, backgroundSize: "30vw, 2vh, contain", backgroundRepeat: 'no-repeat' }}>
                                 <br />
                             </Card>
-                            <Card className="card-style" bordered={false} style={{ width: "30vw", height: "19vh", backgroundImage: `url(${cardRosamini})`, backgroundSize: "30vw, 2vh, contain", color: "FFFFFF", backgroundRepeat: 'no-repeat', margin: '0' }}>
+                            <Card className="card-mini" bordered={false} style={{ backgroundImage: `url(${cardVerdeMini4})`, backgroundSize: "30vw, 2vh, contain", backgroundRepeat: 'no-repeat' }}>
                                 <br />
                             </Card>
-                            <Card className="card-style" bordered={false} style={{ width: "30vw", height: "19vh", backgroundImage: `url(${cardRosamini})`, backgroundSize: "30vw, 2vh, contain", color: "FFFFFF", backgroundRepeat: 'no-repeat', margin: '0' }}>
+                            <Card className="card-mini" bordered={false} style={{ backgroundImage: `url(${cardVerdeMini3})`, backgroundSize: "30vw, 2vh, contain", backgroundRepeat: 'no-repeat' }}>
                                 <br />
                             </Card>
                         </Col>
                     </Row>
-                    <Row className='container_item' style={{margin:'0'}}>
+                    <Row className='container_item' style={{ margin: '0' }}>
                         <Col>
-                            <Card className="card-style" style={{ width: "30vw", textAlign: 'center', padding: "0", margin: "0", color: '#6D7970' }}>
-                                <Text>Planta 1</Text>
+                            <Card className="card-mini-legenda" >
+                                <Text style={{ color: '#6D7970' }}>Planta 1</Text>
                             </Card>
 
-                            <Card className="card-style" style={{ width: "30vw", textAlign: 'center', padding: "0", margin: "0", color: '#6D7970' }}>
-                                <Text>Planta 2</Text>
+                            <Card className="card-mini-legenda">
+                                <Text style={{ color: '#6D7970' }}>Planta 2</Text>
                             </Card>
 
-                            <Card className="card-style" style={{ width: "30vw", textAlign: 'center', padding: "0", margin: "0", color: '#6D7970' }}>
-                                <Text>Planta 3</Text>
+                            <Card className="card-mini-legenda">
+                                <Text style={{ color: '#6D7970' }}>Planta 3</Text>
                             </Card>
                         </Col>
                     </Row>
-                    <Row className='container_item' style={{margin:'0',  marginBottom: '1rem'}}>
+                    <Row className='container_item' style={{ margin: '0', marginBottom: '1rem' }}>
                         <Col>
                             <div className="site-card-border-less-wrapper">
-                                <Card className="card-style" bordered={false} style={{ width: "85vw", height: "15vh", backgroundImage: `url(${cardRosa})`, backgroundSize: "102vw, 2vh, contain", color: "FFFFFF" }}>
-                                    <Title className="" level={3} style={{ color: "#FFFFFF", margin: "0 0 6vh" }}>Quiz</Title>
-                                    <Text style={{ color: "#FFFFFF", margin: "0 0 2vh" }}>Descubra qual a melhor planta para a sua casa</Text>
-                                </Card>
+                                <Link to="/quiz"><Card className="card-style" bordered={false} style={{ backgroundImage: `url(${cardRosa})`, color: "FFFFFF" }}>
+                                    <Image
+                                        src={quizIcon}
+                                        preview={false}
+                                        className='icon-card'
+                                    />
+                                    <Title className="card-title" level={3} style={{ color: "#FFFFFF" }}>Quiz</Title>
+                                    <Text className="descricao-card" style={{ color: "#FFFFFF" }}>Descubra qual a melhor planta para a sua casa</Text>
+                                </Card></Link>
                             </div>
                         </Col>
                     </Row>
-                    <Row className='container_item'style={{margin:'0'}}>
+                    <Row className='container_item' style={{ margin: '0', justifyContent: 'start' }}>
                         <Col>
-                            <Title level={2} className='titulo' style={{ textAlign: "left", marginLeft: '2rem' }}>Plantas Favoritas</Title>
+                            <Title level={2} className='titulo' style={{ marginLeft: '2rem' }}>Plantas Favoritas</Title>
                         </Col>
                     </Row>
-                    <Row className='container_item'>
+                    <Row className='container_item' style={{ margin: '0' }}>
                         <Col>
-                            <Card className="card-style" bordered={false} style={{ width: "22vw", height: "16vh", backgroundColor: "#9BD199", margin: '0px 7px 0px 33px' }}>
+                            <Card className="card-mini" bordered={false} style={{ backgroundImage: `url(${cardVerdeMini1})`, backgroundSize: "30vw, 2vh, contain", backgroundRepeat: 'no-repeat' }}>
                                 <br />
                             </Card>
-                            <Card className="card-style" bordered={false} style={{ width: "22vw", height: "16vh", backgroundColor: "#9BD199", margin: '0px 7px 0px 33px' }}>
+                            <Card className="card-mini" bordered={false} style={{ backgroundImage: `url(${cardVerdemini2})`, backgroundSize: "30vw, 2vh, contain", backgroundRepeat: 'no-repeat' }}>
                                 <br />
                             </Card>
-                            <Card className="card-style" bordered={false} style={{ width: "22vw", height: "16vh", backgroundColor: "#9BD199", margin: '0px 7px 0px 33px' }}>
+                            <Card className="card-mini" bordered={false} style={{ backgroundImage: `url(${cardVerdeMini1})`, backgroundSize: "30vw, 2vh, contain", backgroundRepeat: 'no-repeat' }}>
                                 <br />
                             </Card>
                         </Col>
                     </Row>
-                    <Row className='container_item' style={{margiun:'0'}}>
+                    <Row className='container_item' style={{ margin: '0' }}>
                         <Col>
-                            <Card className="card-style" style={{ width: "22vw", textAlign: 'center', padding: "0", margin: '0px 7px 0px 33px' , color: '#6D7970' }}>
-                                <Text>Planta 1</Text>
+                            <Card className="card-mini-legenda">
+                                <Text style={{ color: '#6D7970' }}>Planta 1</Text>
                             </Card>
 
-                            <Card className="card-style" style={{ width: "22vw", textAlign: 'center', padding: "0", margin: '0px 7px 0px 33px' , color: '#6D7970' }}>
-                                <Text>Planta 2</Text>
+                            <Card className="card-mini-legenda">
+                                <Text style={{ color: '#6D7970' }}>Planta 2</Text>
                             </Card>
 
-                            <Card className="card-style" style={{ width: "22vw", textAlign: 'center', padding: "0", margin: '0px 7px 0px 33px' , color: '#6D7970' }}>
-                                <Text>Planta 3</Text>
+                            <Card className="card-mini-legenda">
+                                <Text style={{ color: '#6D7970' }}>Planta 3</Text>
                             </Card>
                         </Col>
                     </Row>
@@ -119,8 +160,7 @@ const PaginaInicial = () => (
 
 
     </Layout >
-);
+)};
 
 
 export default PaginaInicial;
-

@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
-import PaginaInicial from './Pagina-Inicial';
+import Login from './Login';
 import MenuComponent from '../../components/MenuComponent';
 
+
+  
 function Main() {
+
+
   return (
     <div>
-    <PaginaInicial/>
+    <Login/>
     <MenuComponent/>  
     </div>
   );
