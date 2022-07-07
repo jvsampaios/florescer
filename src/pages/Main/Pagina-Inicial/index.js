@@ -40,17 +40,18 @@ const PaginaInicial = () => (
                     <Row className='container_item'>
                         <Col>
                             <div className="site-card-border-less-wrapper">
-                                <Card className="card-style" bordered={false} style={{ backgroundImage: `url(${cardRosa})`, color: "FFFFFF", margin: '10px 0px 0px 0' }}>
-                                    <Image
-                                        src={catalogoIcon}
-                                        preview={false}
-                                        className='icon-card'
-                                    />
-                                    <Title className="card-title" level={3} style={{ color: "#FFFFFF" }}>Catálogo</Title>
-                                    <Text className="descricao-card" style={{ color: "#FFFFFF" }}>Vasculhe alguns tipos de plantas</Text>
-                                </Card>
-
-                                <Card className="card-style" bordered={false} style={{ backgroundImage: `url(${cardverde})`, color: "FFFFFF", margin: '10px 0px 0px 0' }}>
+                                <Link to='/catalogo'>
+                                    <Card className="card-style" bordered={false} style={{ backgroundImage: `url(${cardRosa})`, color: "FFFFFF", margin: '10px 0px 0px 0' }}>
+                                        <Image
+                                            src={catalogoIcon}
+                                            preview={false}
+                                            className='icon-card'
+                                        />
+                                        <Title className="card-title" level={3} style={{ color: "#FFFFFF" }}>Catálogo</Title>
+                                        <Text className="descricao-card" style={{ color: "#FFFFFF" }}>Vasculhe alguns tipos de plantas</Text>
+                                    </Card>
+                                </Link>
+                                <Link to='/minhas plantas'><Card className="card-style" bordered={false} style={{ backgroundImage: `url(${cardverde})`, color: "FFFFFF", margin: '10px 0px 0px 0' }}>
                                     <Image
                                         src={minhasPlantasIcon}
                                         preview={false}
@@ -58,7 +59,7 @@ const PaginaInicial = () => (
                                     />
                                     <Title className="card-title" level={3} style={{ color: "#FFFFFF" }}>Minhas Plantas</Title>
                                     <Text className="descricao-card" style={{ color: "#FFFFFF" }}>Cuide, analise e conheça mais suas plantas</Text>
-                                </Card>
+                                </Card></Link>
 
                             </div>
                         </Col>
@@ -99,7 +100,7 @@ const PaginaInicial = () => (
                     <Row className='container_item' style={{ margin: '0', marginBottom: '1rem' }}>
                         <Col>
                             <div className="site-card-border-less-wrapper">
-                                <Card className="card-style" bordered={false} style={{ backgroundImage: `url(${cardRosa})`, color: "FFFFFF" }}>
+                                <Link to="/quiz"><Card className="card-style" bordered={false} style={{ backgroundImage: `url(${cardRosa})`, color: "FFFFFF" }}>
                                     <Image
                                         src={quizIcon}
                                         preview={false}
@@ -107,7 +108,7 @@ const PaginaInicial = () => (
                                     />
                                     <Title className="card-title" level={3} style={{ color: "#FFFFFF" }}>Quiz</Title>
                                     <Text className="descricao-card" style={{ color: "#FFFFFF" }}>Descubra qual a melhor planta para a sua casa</Text>
-                                </Card>
+                                </Card></Link>
                             </div>
                         </Col>
                     </Row>

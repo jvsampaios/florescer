@@ -90,10 +90,10 @@
     display: inline-table !important;
     background-color: transparent !important;
     border: none !important;
-    width: 30vw;
+    width: 29vw !important;
     text-align: center;
     padding: 0 !important;
-    margin: 0px 7px 0px 33px;
+    margin: 0px 7px 0px 0px !important;
     color: #6D7970 !important;
 }
 

@@ -13,8 +13,6 @@ const footerStyle = {
       borderTopRightRadius: '30px',
       boxShadow: '0px 4px 10px green',
       minHeight: '64px',
-      display: 'flex',
-      alignItems: 'flex-start',
     };
     const divStyle = {
         marginTop: '15%',

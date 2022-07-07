@@ -6,6 +6,8 @@ import Login from './pages/Main/Login';
 import Cadastro from './pages/Main/Cadastro';
 import PaginaInicial from './pages/Main/Pagina-Inicial';
 import Quiz from './pages/Main/Quiz';
+import Catalogo from './pages/Main/Catalogo';
+import MinhasPlantas from './pages/Main/Minhas-Plantas';
 
 
 export default function Routes() {
@@ -17,6 +19,8 @@ export default function Routes() {
         <Route path="/login" component={Login}/>
         <Route path="/pagina inicial" component={PaginaInicial}/>
         <Route path='/quiz' component={Quiz}/>
+        <Route path='/catalogo' component={Catalogo}/>
+        <Route path='/minhas plantas' component={MinhasPlantas}/>
       </Switch>
     </Router>
   );
