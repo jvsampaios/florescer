@@ -14,6 +14,10 @@ import PaginaInicial from './pages/Main/Pagina-Inicial';
 import Quiz from './pages/Main/Quiz';
 import Catalogo from './pages/Main/Catalogo';
 import MinhasPlantas from './pages/Main/Minhas-Plantas';
+import A_Z from './pages/Main/Catalogo/A_Z';
+import facilCuidado from './pages/Main/Catalogo/FacilCuidado';
+import Grandes from './pages/Main/Catalogo/Grandes';
+
 
 // context
 import { AuthProvider } from "./context/AuthContext";
@@ -46,6 +50,10 @@ export default function Routes() {
         <Route path='/quiz' component={user ? Quiz : Cadastro}/>
         <Route path='/catalogo' component={Catalogo}/>
         <Route path='/minhas plantas' component={MinhasPlantas}/>
+        <Route path='/AZ' component={A_Z}/>
+        <Route path='/facilCuidado' component={facilCuidado}/>
+        <Route path='/Grandes' component={Grandes}/>
+
       </Switch>
     </Router>
     </AuthProvider>

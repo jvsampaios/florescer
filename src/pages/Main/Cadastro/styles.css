@@ -88,3 +88,10 @@
         padding: 0 12vw !important;
     }
   }
+
+  .logo {
+    margin: auto;
+    display: block;
+    width: 40%;
+    margin-bottom: 10%;
+}

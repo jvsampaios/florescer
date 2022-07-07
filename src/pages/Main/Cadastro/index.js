@@ -16,6 +16,7 @@ import "../../../fonts/HKGrotesk-Bold.otf";
 import "../../../fonts/HKGrotesk-Regular.otf";
 import "../../../fonts/HKGrotesk-Medium.otf";
 import { useAuthentication } from "../../../hooks/useAuthentication";
+import logo from '../../../assets/logo.png';
 
 
 const { Title, Text } = Typography;
@@ -57,6 +58,7 @@ useEffect(() => {
  
 return(
     <Layout className="layout">
+        <img className="logo" src={logo}/>
         <Title level={2} className='titulo'>Junte-se ao aplicativo mais completo sobre plantas!</Title>
         <Content className="site-layout-content">
             <div>
