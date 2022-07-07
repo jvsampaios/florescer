@@ -166,4 +166,3 @@ return(
 
 
 export default Cadastro;
-
