@@ -23,7 +23,7 @@ const { Content } = Layout;
 
 
 
-const PaginaInicial = () => {
+const Cadastro = () => {
 
     const [displayName, setDisplayName] = useState("");
     const [email, setEmail] = useState("");
@@ -34,10 +34,8 @@ const PaginaInicial = () => {
     const { createUser, error: authError, loading } = useAuthentication();
 
     const handleSubmit = async (e) => {
-
         e.preventDefault();
         setError("");
-
         const user = {
             displayName,
             email,
@@ -45,10 +43,9 @@ const PaginaInicial = () => {
           };
 
           const res = await createUser(user);
+          console.log(res);
 
-            console.log(res);
-
-          console.log(user);
+          
 };
 
 useEffect(() => {
@@ -168,5 +165,5 @@ return(
 };
 
 
-export default PaginaInicial;
+export default Cadastro;
 
