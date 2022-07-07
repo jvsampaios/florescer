@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect, useState } from "react";
+
 import {
     Layout,
     Typography,
@@ -14,11 +15,47 @@ import "antd/dist/antd.css";
 import "../../../fonts/HKGrotesk-Bold.otf";
 import "../../../fonts/HKGrotesk-Regular.otf";
 import "../../../fonts/HKGrotesk-Medium.otf";
+import { useAuthentication } from "../../../hooks/useAuthentication";
+
 
 const { Title, Text } = Typography;
 const { Content } = Layout;
 
-const PaginaInicial = () => (
+
+
+const Cadastro = () => {
+
+    const [displayName, setDisplayName] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [error, setError] = useState("");
+
+
+    const { createUser, error: authError, loading } = useAuthentication();
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setError("");
+        const user = {
+            displayName,
+            email,
+            password,
+          };
+
+          const res = await createUser(user);
+          console.log(res);
+
+          
+};
+
+useEffect(() => {
+    if (authError) {
+      setError(authError);
+    }
+  }, [authError]);
+
+ 
+return(
     <Layout className="layout">
         <Title level={2} className='titulo'>Junte-se ao aplicativo mais completo sobre plantas!</Title>
         <Content className="site-layout-content">
@@ -51,32 +88,36 @@ const PaginaInicial = () => (
 
                                 }}
                             >
-                                Cadastar
+                                Cadastro
                             </Button>
                         </Col>
                     </Row>
-                    <Row className='container_item'>
+                    <form onSubmit={handleSubmit}>
+                    <div className='container_item'>
                         <Col>
                             <Text style={{ fontSize: '1rem', color: '#6D7970' }}>Nome</Text><br />
-                            <Input size="large" style={{ width: '85vw', color: '#6D7970', borderRadius: '16px', border: '1px solid #6D7970' }} />
+                            <Input type="text" name="displayName" required value={displayName} onChange={(e) => setDisplayName(e.target.value)}
+                            size="large" style={{ width: '85vw', color: '#6D7970', borderRadius: '16px', border: '1px solid #6D7970' }}/>
                         </Col>
-                    </Row>
-                    <Row className='container_item'>
+                    </div>
+                    <div className='container_item'>
                         <Col>
                             <Text style={{ fontSize: '1rem', color: '#6D7970' }}>Email</Text><br />
-                            <Input size="large" placeholder="exemple@exemple.com" style={{ width: '85vw', color: '#6D7970' }} prefix={<UserOutlined />} />
+                            <Input type="email" name="email" size="large" required value={email} onChange={(e) => setEmail(e.target.value)}
+                            placeholder="exempland@exemple.com" style={{ width: '85vw', color: '#6D7970' }} prefix={<UserOutlined />} />
                         </Col>
-                    </Row>
-                    <Row className='container_item' style={{ marginBottom: '2rem' }}>
+                    </div>
+                    <div className='container_item' style={{ marginBottom: '2rem' }}>
                         <Col>
                             <Text style={{ fontSize: '1rem', color: '#6D7970' }}>Senha</Text><br />
-                            <Input.Password size="large" style={{ width: '85vw' }} />
+                            <Input.Password name="password" required value={password} onChange={(e) => setPassword(e.target.value)}
+                            size="large" style={{ width: '85vw' }} />
                         </Col>
-                    </Row>
-                    <Row className='container_item' >
+                    </div>
+                    <div className='container_item' >
                         <Col>
-                            <Button
-                                type="primary"
+                            <button
+                                type="submit"
                                 style={{
                                     background: '#EA7E84',
                                     border: 'none',
@@ -85,13 +126,16 @@ const PaginaInicial = () => (
                                     height: '3rem',
                                     boxShadow: '1px 3px 3px 1px #EA7E84',
                                     fontSize: '1.2rem',
+                                    color: 'white',
                                 }}
                             >
                                 Cadastrar
-                            </Button>
+                            </button>
                         </Col>
-                    </Row>
+                    </div>
+                    </form>
                     <Row className='container_item' >
+                    {error && <p className="error">{error}</p>}
                         <Col>
                             <Text style={{ fontSize: '1rem', fontWeight: 'ligther', color: '#6D7970' }}>Já tem uma conta?</Text>
                             <Link to='/login'>
@@ -117,8 +161,9 @@ const PaginaInicial = () => (
 
 
     </Layout >
-);
+    );
+};
 
 
-export default PaginaInicial;
+export default Cadastro;
 
