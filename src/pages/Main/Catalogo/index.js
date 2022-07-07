@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import {
     Layout,
     Typography,
@@ -11,7 +11,7 @@ import {
 } from 'antd';
 import { useHistory } from 'react-router-dom';
 import './styles.css'
-import { ArrowRightOutlined, ArrowLeftOutlined, SearchOutlined } from '@ant-design/icons';
+import { ArrowLeftOutlined, SearchOutlined } from '@ant-design/icons';
 import cactus from "../../../assets/cacto.png";
 import cardVerde from "../../../assets/crad-medio-verde.png";
 import minhasPlantasIcon from "../../../assets/minhas-plantas-icon.svg";
@@ -21,21 +21,35 @@ const { Title, Text } = Typography;
 const { Content } = Layout;
 
 const Catalogo = () => {
-    const [current, setCurrent] = useState(0);
-    const next = () => {
-        setCurrent(current + 1);
-    };
     const history = useHistory();
-
-    const steps = [
-        {
-            title: 'First',
-            content:
-
+    return (
+        <Layout className="layout" >
+            <Row className='container_step' style={{ justifyContent: 'flex-start' }}>
+                <Col>
+                    <Button type='link' style={{ color: '#6D7970' }} onClick={history.goBack}>
+                        <ArrowLeftOutlined style={{ fontSize: '26px', padding: 0 }} />
+                    </Button>
+                </Col>
+            </Row>
+            <Title className='titulo'>Catálogo</Title>
+            <Content className="site-layout-content" style={{ display: 'block', padding: 0 }} >
+                <Row className='container_item'>
+                    <Col>
+                        <Input
+                            placeholder="Pesquisar"
+                            style={{
+                                width: '85vw',
+                                background: 'none',
+                            }}
+                            suffix={<SearchOutlined />}
+                            size="large"
+                        />
+                    </Col>
+                </Row>
                 <Row className='container_step'>
-                     <Row className='container_item' style={{ margin: 0, justifyContent: 'start' }}>
+                    <Row className='container_item' style={{ margin: 0, justifyContent: 'start' }}>
                         <Col>
-                            <Title level={2} className='titulo-categoria' style={{ textAlign: "left"}}>Fácil Cuidado</Title>
+                            <Title level={2} className='titulo-categoria' style={{ textAlign: "left" }}>Fácil Cuidado</Title>
                         </Col>
                     </Row>
                     <Row className='container_item' style={{ alignContent: 'center' }}>
@@ -78,82 +92,7 @@ const Catalogo = () => {
                             </Card>
                         </Col>
                     </Row>
-                </Row>,
-        },
-        {
-            title: 'Second',
-            content:
-                <Row className='container_step'>
-                    <Row className='container_step' style={{ padding: '0 15px', textAlign: 'justify' }}>
-                        <Col>
-                            <Text>E para te ajudar, desenvolvi esse quiz que te apresenta as plantinhas perfeitas para você, independente da sua realidade. Curioso para conhecê-las?</Text>
-                        </Col>
-                    </Row>
-
                 </Row>
-            ,
-        },
-    ];
-
-    return (
-        <Layout className="layout" >
-            <Row className='container_step' style={{ justifyContent: 'flex-start' }}>
-                <Col>
-                    <Button type='link' style={{ color: '#6D7970' }} onClick={history.goBack}>
-                        <ArrowLeftOutlined style={{ fontSize: '26px', padding: 0 }} />
-                    </Button>
-                </Col>
-            </Row>
-            <Title className='titulo'>Catálogo</Title>
-            <Content className="site-layout-content" style={{ display: 'block', padding: 0 }} >
-                <Row className='container_item'>
-                    <Col>
-                        <Input
-                            placeholder="Pesquisar"
-                            style={{
-                                width: '85vw',
-                                background: 'none',
-                            }}
-                            suffix={<SearchOutlined />}
-                            size="large"
-                        />
-                    </Col>
-                </Row>
-                {steps[current].content}
-                <div>
-
-                    {current < steps.length - 1 && (
-                        <Row className='container_step' style={{ alignContent: 'end' }}>
-                            <Col>
-                                <Button type='link' style={{ color: '#6D7970', fontSize: '1rem' }} onClick={() => next()}>
-                                    Avançar
-                                    <ArrowRightOutlined />
-                                </Button>
-
-                            </Col>
-                        </Row>
-                    )}
-                    {current === steps.length - 1 && (
-                        <Row className='container_step' style={{ alignContent: 'center' }}>
-                            <Col>
-                                <Button
-                                    type="primary"
-                                    style={{
-                                        background: '#EA7E84',
-                                        border: 'none',
-                                        borderRadius: '16px',
-                                        width: '13rem',
-                                        height: '3rem',
-                                        boxShadow: '1px 3px 3px 1px #EA7E84',
-                                        fontSize: '1.2rem',
-                                    }}
-                                >
-                                    Começar Quiz
-                                </Button>
-                            </Col>
-                        </Row>
-                    )}
-                </div>
             </Content>
 
 
