@@ -57,17 +57,17 @@ const Catalogo = () => {
                             <Link to='/planta'>
                                 <Card className="card-catalogo-style" bordered={false} style={{ backgroundImage: `url(${cardVerde})`, color: "FFFFFF", margin: '10px 0px 0px 0' }}>
 
-                                    <Image
-                                        src={minhasPlantasIcon}
-                                        preview={false}
-                                        className='icon-catalogo'
-                                    />
-                                    <Image
-                                        src={cactus}
-                                        preview={false}
-                                        className='img-catalogo'
-                                    />
-                                </Card>
+                                <Image
+                                    src={minhasPlantasIcon}
+                                    preview={false}
+                                    className='icon-catalogo'
+                                />
+                                <Image
+                                    src={cactus}
+                                    preview={false}
+                                    className='img-catalogo'
+                                />
+                            </Card>
                             </Link>
                             <Card className="card-catalogo-style" bordered={false} style={{ backgroundImage: `url(${cardVerde})`, color: "FFFFFF", margin: '10px 0px 0px 0' }}>
                                 <Image

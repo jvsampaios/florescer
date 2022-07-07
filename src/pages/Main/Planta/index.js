@@ -32,7 +32,7 @@ const genExtra = () => (
 
 );
 
-const Catalogo = () => {
+const Planta = () => {
     const history = useHistory();
     return (
         <Layout className="layout" >
@@ -121,5 +121,5 @@ const Catalogo = () => {
 };
 
 
-export default Catalogo;
+export default Planta;
 

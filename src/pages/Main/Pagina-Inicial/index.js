@@ -13,8 +13,6 @@ import cardRosa from "../../../assets/card-rosa.png";
 import cardverde from "../../../assets/card-verde.png";
 import cardVerdeMini3 from "../../../assets/card-mini-verde3.png";
 import cardVerdeMini4 from "../../../assets/card-mini-verde4.png";
-import cardRosaMini from "../../../assets/card-mini-rosa.svg";
-import cardRosamini from "../../../assets/card-mini-rosa2.svg";
 import cardVerdeMini1 from "../../../assets/card-mini-verde1.png";
 import cardVerdemini2 from "../../../assets/card-mini-verde2.png";
 import catalogoIcon from "../../../assets/catalogo-icon.svg";
@@ -22,16 +20,11 @@ import minhasPlantasIcon from "../../../assets/minhas-plantas-icon.svg";
 import quizIcon from "../../../assets/quiz-icon.svg";
 import logoutIcon from "../../../assets/logout-icon.svg";
 import './styles.css'
-import { useAuthValue } from '../../../context/AuthContext';
-import { useAuthentication } from '../../../hooks/useAuthentication';
 
 const { Title, Text } = Typography;
 const { Content } = Layout;
 
 const PaginaInicial = () => {
-    const { user } = useAuthValue();
-    const { logout } = useAuthentication();
-console.log(user)
 
     return(
     <Layout className="layout">
@@ -40,7 +33,6 @@ console.log(user)
                 preview={false}
                 className='icon-card'
                 style={{ width: '1.5rem' }}
-                onClick={logout}
             />
 
         <Title className='titulo'>Florescer</Title>
