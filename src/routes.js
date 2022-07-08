@@ -17,6 +17,7 @@ import MinhasPlantas from './pages/Main/Minhas-Plantas';
 import A_Z from './pages/Main/Catalogo/A_Z';
 import facilCuidado from './pages/Main/Catalogo/FacilCuidado';
 import Grandes from './pages/Main/Catalogo/Grandes';
+import Planta from './pages/Main/Planta';
 
 
 // context
@@ -53,6 +54,7 @@ export default function Routes() {
         <Route path='/AZ' component={A_Z}/>
         <Route path='/facilCuidado' component={facilCuidado}/>
         <Route path='/Grandes' component={Grandes}/>
+        <Route path='/planta' component={Planta}/>
 
       </Switch>
     </Router>

@@ -15,6 +15,7 @@ import { ArrowLeftOutlined, SearchOutlined } from '@ant-design/icons';
 import cactus from "../../../../assets/cacto.png";
 import cardVerde from "../../../../assets/cardverdeplantas.png";
 import "antd/dist/antd.css";
+import MenuComponent from '../../../../components/MenuComponent';
 
 const { Title, Text } = Typography;
 const { Content } = Layout;
@@ -87,6 +88,8 @@ const Catalogo = () => {
                         </Col>
                     </Row>
                 </Row>
+
+                <MenuComponent/>
             </Content>
 
 

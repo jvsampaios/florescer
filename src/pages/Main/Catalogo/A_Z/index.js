@@ -12,10 +12,12 @@ import {
 import { useHistory } from 'react-router-dom';
 import './styles.css'
 import { ArrowLeftOutlined, SearchOutlined } from '@ant-design/icons';
-import cactus from "../../../../assets/cacto.png";
-import cardVerde from "../../../../assets/cardverdeplantas.png";
 import "antd/dist/antd.css";
-import minhasPlantasIcon from "../../../../assets/favorito.svg"
+import MenuComponent from '../../../../components/MenuComponent';
+import amorperfeito from "../../../../assets/amor_perfeito.png";
+import cactus from "../../../../assets/cactus.png";
+import carnivora from "../../../../assets/carnivora.png";
+import espadadesao from "../../../../assets/espadadesao.png";
 
 const { Title, Text } = Typography;
 const { Content } = Layout;
@@ -33,7 +35,7 @@ const Catalogo = () => {
             </Row>
             <Title className='titulo'>Catálogo</Title>
             <Content className="site-layout-content" style={{ display: 'block', padding: 0 }} >
-                <Row className='container_item'>
+            <Row className='container_item'>
                     <Col>
                         <Input
                             placeholder="Pesquisar"
@@ -46,51 +48,54 @@ const Catalogo = () => {
                         />
                     </Col>
                 </Row>
-
-                <Row className='container_item' style={{ margin: 0, justifyContent: 'start' }}>
+            <Row className='container_item' style={{ margin: 0, justifyContent: 'start' }}>
                         <Col>
                             <Title level={2} className='titulo-categoria' style={{ textAlign: "left" }}>A - Z</Title>
                         </Col>
                     </Row>
 
+                <Row className='container_item'>
+                    <Col>
+                    <img src={amorperfeito} className="card-catalogo-style"/>
+
+                    </Col>
+
+                    <Col>
+                    <img src={cactus} className="card-catalogo-style"/>
+
+                    </Col>
+                </Row>
+                <Row className='container_item' style={{ margin: '0' }}>
+                        <Col>
+                            <Card className="card-categoria" >
+                                <Text style={{ color: '#6D7970' }}>Favoritas</Text>
+                            </Card>
+                            </Col>
+                            <Col>
+                            <Card className="card-categoria">
+                                <Text style={{ color: '#6D7970'}}>A - Z</Text>
+                            </Card>
+                        </Col>
+                    </Row>
+
+               
+
 
                 <Row className='container_step'>
                     <Row className='container_item' style={{ alignContent: 'center' }}>
                         <Col>
-                            <Card className="card-catalogo-style" bordered={false} style={{ backgroundImage: `url(${cardVerde})`, color: "FFFFFF", margin: '10px 0px 0px 0' }}>
-
-                                <Image
-                                    src={cactus}
-                                    preview={false}
-                                    className='img-catalogo'
-                                />
-                                
-                            </Card>
-
-                            
-
-                            <Card className="card-catalogo-style" bordered={false} style={{ backgroundImage: `url(${cardVerde})`, color: "FFFFFF", margin: '10px 0px 0px 0' }}>
-                                
-                                <Image
-                                    src={cactus}
-                                    preview={false}
-                                    className='img-catalogo'
-                                />
-                            </Card>
+                        <img src={carnivora} className="card-catalogo-style"/>
+  
                         </Col>
-                    </Row>
-                    <Row className='container_item' style={{ margin: '0' }}>
+
                         <Col>
-                            <Card className="card-categoria" >
-                                <Text style={{ color: '#6D7970' }}>Amor-perfeito</Text>
-                            </Card>
+                    <img src={espadadesao} className="card-catalogo-style"/>
 
-                            <Card className="card-categoria">
-                                <Text style={{ color: '#6D7970' }}>A - Z</Text>
-                            </Card>
-                        </Col>
+                    </Col>
                     </Row>
+                   
                 </Row>
+                <MenuComponent/>
             </Content>
 
 

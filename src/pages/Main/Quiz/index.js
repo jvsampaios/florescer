@@ -13,6 +13,7 @@ import { ArrowRightOutlined, ArrowLeftOutlined } from '@ant-design/icons';
 import "antd/dist/antd.css";
 import personagemFrame1 from "../../../assets/imagem-personagem1.png";
 import personagemFrame2 from "../../../assets/imagem-personagem2.png";
+import MenuComponent from '../../../components/MenuComponent';
 
 const { Title, Text } = Typography;
 const { Content } = Layout;
@@ -135,6 +136,7 @@ const Quiz = () => {
                         </Row>
                     )}
                 </div>
+                <MenuComponent/>
             </Content>
 
 

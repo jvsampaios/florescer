@@ -17,6 +17,7 @@ import cactus from "../../../assets/cacto.png";
 import cardVerde from "../../../assets/crad-medio-verde.png";
 import minhasPlantasIcon from "../../../assets/minhas-plantas-icon.svg";
 import "antd/dist/antd.css";
+import MenuComponent from '../../../components/MenuComponent';
 
 const { Title, Text } = Typography;
 const { Content } = Layout;
@@ -100,7 +101,7 @@ const Catalogo = () => {
                     </Tooltip>
 
                 </Row>
-
+            <MenuComponent/>
             </Content >
 
 
