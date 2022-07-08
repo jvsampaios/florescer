@@ -34,7 +34,8 @@
 .planta {
     width: 47vw;
 }
-.icon-collapse{
+
+.icon-collapse {
     transform: rotate(0deg);
     width: 1.4rem;
 }
@@ -53,8 +54,8 @@
 }
 
 
-.ant-collapse-item{
-    border:none !important;
+.ant-collapse-item {
+    border: none !important;
 }
 
 .card-planta-style {
@@ -75,15 +76,37 @@
     font-size: 1.1rem;
 }
 
-@media (max-width:428px){
-    .sobre-planta{
+.icon-planta {
+    width: 2rem;
+    margin-right: 12px;
+}
+
+.icon-estrela {
+    width: 2rem;
+    margin-right: 15px;
+}
+
+@media (max-width:428px) {
+    .sobre-planta {
         font-size: 1rem;
     }
-    .ant-collapse-header-text{
+
+    .ant-collapse-header-text {
         font-size: 1rem;
     }
-    .icon-collapse{
+
+    .icon-collapse {
         transform: rotate(0deg);
         width: 1.2rem;
+    }
+
+    .icon-planta {
+        width: 1.5rem;
+        margin-right: 8px;
+    }
+
+    .icon-estrela {
+        width: 1.5rem;
+        margin-right: 15px;
     }
 }

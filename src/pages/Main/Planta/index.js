@@ -19,6 +19,8 @@ import vasos from "../../../assets/vasos_icon.svg";
 import clima from "../../../assets/clima_icon.svg";
 import "antd/dist/antd.css";
 import MenuComponent from '../../../components/MenuComponent';
+import minhasPlantasIcon from "../../../assets/folha.svg";
+import favoritar from "../../../assets/estrela.svg";
 
 const { Title, Text } = Typography;
 const { Content } = Layout;
@@ -37,10 +39,20 @@ const Planta = () => {
     return (
         <Layout className="layout" >
             <Row className='container_item' style={{ justifyContent: 'flex-start', marginBottom: "0" }}>
-                <Col>
+                <Col style={{width:'100%'}}>
                     <Button type='link' style={{ color: '#6D7970' }} onClick={history.goBack}>
                         <ArrowLeftOutlined style={{ fontSize: '26px', padding: 0 }} />
                     </Button>
+                     <Image
+                        src={favoritar}
+                        preview={false}
+                        className='icon-estrela'
+                    />
+                    <Image
+                        src={minhasPlantasIcon}
+                        preview={false}
+                        className='icon-planta'
+                    />
                 </Col>
             </Row>
             <Row className='container_item'>

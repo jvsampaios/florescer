@@ -11,6 +11,7 @@ import Quiz from './pages/Main/Quiz';
 import Catalogo from './pages/Main/Catalogo';
 import MinhasPlantas from './pages/Main/Minhas-Plantas';
 import Planta from './pages/Main/Planta';
+import Add_Planta from './pages/Main/Add-Planta';
 
 
 
@@ -26,6 +27,7 @@ export default function Routes() {
         <Route path='/catalogo' component={Catalogo}/>
         <Route path='/minhas plantas' component={MinhasPlantas}/>
         <Route path='/planta' component={Planta}/>
+        <Route path='/adicionar planta' component={Add_Planta}/>
       </Switch>
     </Router>
   );
