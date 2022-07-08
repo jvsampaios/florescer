@@ -12,12 +12,10 @@ import {
 } from 'antd';
 import { useHistory } from 'react-router-dom';
 import './styles.css';
-import { ArrowLeftOutlined, SearchOutlined, PlusOutlined } from '@ant-design/icons';
-import cactus from "../../../assets/cacto.png";
-import cardVerde from "../../../assets/crad-medio-verde.png";
-import minhasPlantasIcon from "../../../assets/minhas-plantas-icon.svg";
+import { ArrowLeftOutlined, SearchOutlined} from '@ant-design/icons';
+import card_add from "../../../assets/add.png";
+import card_oval from "../../../assets/card-oval.png";
 import "antd/dist/antd.css";
-import MenuComponent from '../../../components/MenuComponent';
 
 const { Title, Text } = Typography;
 const { Content } = Layout;
@@ -49,39 +47,26 @@ const Catalogo = () => {
                             size="large"
                         />
                     </Col>
-                    <Row className='container_step'>
+                    <Row className='container_step' >
                         <Row className='container_item' style={{ margin: 0, justifyContent: 'start' }}>
                             <Col>
                                 <Title level={2} className='titulo-categoria' style={{ textAlign: "left" }}>Minhas Plantas</Title>
                             </Col>
                         </Row>
-                        <Row className='container_item' style={{ alignContent: 'center' }}>
+                        <Row className='container_item' style={{ alignContent: 'center', margin:0 }}>
                             <Col>
-                                <Card className="card-catalogo-style" bordered={false} style={{ backgroundImage: `url(${cardVerde})`, color: "FFFFFF", margin: '10px 0px 0px 0' }}>
-
-                                    <Image
-                                        src={minhasPlantasIcon}
-                                        preview={false}
-                                        className='icon-catalogo'
-                                    />
-                                    <Image
-                                        src={cactus}
-                                        preview={false}
-                                        className='img-catalogo'
-                                    />
-                                </Card>
-                                <Card className="card-catalogo-style" bordered={false} style={{ backgroundImage: `url(${cardVerde})`, color: "FFFFFF", margin: '10px 0px 0px 0' }}>
-                                    <Image
-                                        src={minhasPlantasIcon}
-                                        preview={false}
-                                        className='icon-catalogo'
-                                    />
-                                    <Image
-                                        src={cactus}
-                                        preview={false}
-                                        className='img-catalogo'
-                                    />
-                                </Card>
+                                <Image
+                                    src={card_add}
+                                    preview={false}
+                                    className='card-oval'
+                                />
+                            </Col>
+                            <Col>
+                                <Image
+                                    src={card_oval}
+                                    preview={false}
+                                    className='card-oval'
+                                />
                             </Col>
                         </Row>
                         <Row className='container_item' style={{ margin: '0' }}>
@@ -96,12 +81,8 @@ const Catalogo = () => {
                             </Col>
                         </Row>
                     </Row>
-                    <Tooltip title="add">
-                        <Button className='button-add' type="primary" size="large" shape="circle" icon={<PlusOutlined className='icon-add'/>} />
-                    </Tooltip>
-
                 </Row>
-            <MenuComponent/>
+
             </Content >
 
 

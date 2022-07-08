@@ -9,7 +9,7 @@ import {
     Image,
     Card
 } from 'antd';
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 import './styles.css'
 import { ArrowLeftOutlined, SearchOutlined } from '@ant-design/icons';
 import "antd/dist/antd.css";
@@ -55,10 +55,12 @@ const Catalogo = () => {
                     </Row>
 
                 <Row className='container_item'>
+                    <Link to ='/placeholder'>
                     <Col>
                     <img src={amorperfeito} className="card-catalogo-style"/>
 
                     </Col>
+                    </Link>
 
                     <Col>
                     <img src={cactus} className="card-catalogo-style"/>
@@ -67,13 +69,15 @@ const Catalogo = () => {
                 </Row>
                 <Row className='container_item' style={{ margin: '0' }}>
                         <Col>
+                        <Link to ='/placeholder'>
                             <Card className="card-categoria" >
-                                <Text style={{ color: '#6D7970' }}>Favoritas</Text>
+                                <Text style={{ color: '#6D7970' }}>Amor-perfeito</Text>
                             </Card>
+                            </Link>
                             </Col>
                             <Col>
                             <Card className="card-categoria">
-                                <Text style={{ color: '#6D7970'}}>A - Z</Text>
+                                <Text style={{ color: '#6D7970'}}>Cactus</Text>
                             </Card>
                         </Col>
                     </Row>

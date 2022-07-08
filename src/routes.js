@@ -18,7 +18,8 @@ import A_Z from './pages/Main/Catalogo/A_Z';
 import facilCuidado from './pages/Main/Catalogo/FacilCuidado';
 import Grandes from './pages/Main/Catalogo/Grandes';
 import Planta from './pages/Main/Planta';
-
+import Add_Planta from './pages/Main/Add-Planta';
+import placeholder from './pages/Main/PlantaPlaceholder';
 
 // context
 import { AuthProvider } from "./context/AuthContext";
@@ -55,7 +56,8 @@ export default function Routes() {
         <Route path='/facilCuidado' component={facilCuidado}/>
         <Route path='/Grandes' component={Grandes}/>
         <Route path='/planta' component={Planta}/>
-
+        <Route path='/adicionar planta' component={Add_Planta}/>
+        <Route path='/placeholder' component={placeholder}/>
       </Switch>
     </Router>
     </AuthProvider>
