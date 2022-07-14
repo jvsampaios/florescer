@@ -8,7 +8,8 @@ const footerStyle = {
       width: '100%',
       height: '6%',
       background: '#8AB77B',
-      marginTop: '55%',
+      marginTop: '55%!important',
+      paddingTop: '2%!important',
       borderTopLeftRadius: '30px',
       borderTopRightRadius: '30px',
       boxShadow: '0px 4px 10px green',
@@ -38,7 +39,7 @@ const footerStyle = {
             <footer style={footerStyle}>
                     <Link to ='/pagina inicial'><img src='./HomeIcon.svg' style={icon1} alt='oi'/></Link>
                     <Link to ='/catalogo'><img src='./CatalogoIcon.svg' style={icon2} alt='oi'/></Link>
-                    <img src='./FolhaIcon.svg' style={icon2} alt='oi'/>
+                    <Link to ='minhas plantas'><img src='./FolhaIcon.svg' style={icon2} alt='oi'/></Link>
                         </footer>
       </div>
     export default MenuComponent;

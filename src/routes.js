@@ -15,7 +15,8 @@ import Quiz from './pages/Main/Quiz';
 import Catalogo from './pages/Main/Catalogo';
 import MinhasPlantas from './pages/Main/Minhas-Plantas';
 import A_Z from './pages/Main/Catalogo/A_Z';
-import facilCuidado from './pages/Main/Catalogo/FacilCuidado';
+import Plantinhas from './pages/Main/Minhas-Plantas2';
+import FacilCuidado from './pages/Main/Catalogo/FacilCuidado';
 import Grandes from './pages/Main/Catalogo/Grandes';
 import Planta from './pages/Main/Planta';
 import Add_Planta from './pages/Main/Add-Planta';
@@ -63,9 +64,10 @@ export default function Routes() {
         <Route path='/catalogo' component={Catalogo}/>
         <Route path='/minhas plantas' component={MinhasPlantas}/>
         <Route path='/AZ' component={A_Z}/>
-        <Route path='/facilCuidado' component={facilCuidado}/>
+        <Route path='/facilCuidado' component={FacilCuidado}/>
         <Route path='/Grandes' component={Grandes}/>
         <Route path='/planta' component={Planta}/>
+        <Route path='/plantinhas' component={Plantinhas}/>
         <Route path='/adicionar planta' component={Add_Planta}/>
         <Route path='/placeholder' component={placeholder}/>
         <Route path='/amorperfeito' component={amorperfeito}/>

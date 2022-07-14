@@ -9,7 +9,7 @@ import {
     Image,
     Card
 } from 'antd';
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 import './styles.css'
 import { ArrowLeftOutlined, SearchOutlined } from '@ant-design/icons';
 import cactus from "../../../../assets/cacto.png";

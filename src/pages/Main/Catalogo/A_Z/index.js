@@ -83,7 +83,7 @@ const Catalogo = () => {
                                 <Text style={{ color: '#6D7970' }}>Amor-perfeito</Text>
                             </Card>
                             </Link>
-                            </Col>
+                            </Col> 
                             <Col>
                             <Link to ='/cactus'>
                             <Card className="card-categoria">

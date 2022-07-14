@@ -17,8 +17,8 @@ import './styles.css';
 import { ArrowLeftOutlined, SearchOutlined} from '@ant-design/icons';
 import card_add from "../../../assets/add.png";
 import card_oval from "../../../assets/card-oval.png";
-import MenuComponent from '../../../components/MenuComponent';
 import "antd/dist/antd.css";
+import MenuComponent from '../../../components/MenuComponent';
 
 const { Title, Text } = Typography;
 const { Content } = Layout;
@@ -66,7 +66,13 @@ const Catalogo = () => {
                                 />
                             </Col>
                             </Link>
-                           
+                            <Col>
+                                <Image
+                                    src={card_oval}
+                                    preview={false}
+                                    className='card-oval'
+                                />
+                            </Col>
                         </Row>
                         <Row className='container_item' style={{ margin: '0' }}>
                             <Col>
@@ -74,11 +80,14 @@ const Catalogo = () => {
                                     <Text style={{ color: '#6D7970' }}></Text>
                                 </Card>
 
+                                <Card className="card-categoria">
+                                    <Text style={{ color: '#6D7970' }}>Cacto juliette</Text>
+                                </Card>
                             </Col>
                         </Row>
                     </Row>
                 </Row>
-<MenuComponent/>
+<MenuComponent />
             </Content >
 
 

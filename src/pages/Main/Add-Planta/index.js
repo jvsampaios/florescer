@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
+
 import {
     Layout,
     Typography,
@@ -8,6 +10,7 @@ import {
     Image,
     Input,
     DatePicker,
+    Select,
 } from 'antd';
 import { useHistory } from 'react-router-dom';
 import './styles.css'
@@ -18,6 +21,7 @@ import cacto from "../../../assets/cacto.png";
 
 const { Title, Text } = Typography;
 const { Content } = Layout;
+const { Option } = Select;
 
 const Planta = () => {
     const history = useHistory();
@@ -60,6 +64,41 @@ const Planta = () => {
                         }}
                     />
                 </Row>
+
+                <Row className='container_item' style={{ textAlign: 'left', justifyContent: 'start' }}>
+                    <Text style={{ fontSize: '1rem', color: '#6D7970' }}>Espécie</Text><br />
+                    <Select
+                        showSearch
+                        size="large"
+                        style={{
+                            width: '85vw',
+                            color: '#6D7970',
+                            borderRadius: '16px',
+                            border: '1px solid #6D7970'
+                        }}
+                        bordered={false}
+                        placeholder="Selecione uma espécie"
+                        optionFilterProp="children"
+                        filterOption={(input, option) => option.children.includes(input)}
+                        filterSort={(optionA, optionB) =>
+                          optionA.children.toLowerCase().localeCompare(optionB.children.toLowerCase())
+                        }
+                      >
+                        <Option value="1">Amor-Perfeito</Option>
+                        <Option value="2">Cactus</Option>
+                        <Option value="3">Espada-de-São-Jorge</Option>
+                        <Option value="4">Lavanda</Option>
+                        <Option value="5">Manjericão</Option>
+                        <Option value="6">Orquídea Borboleta</Option>
+                        <Option value="7">Pacová</Option>
+                        <Option value="8">Planta Carnívora</Option>
+                        <Option value="9">Rosa do Deserto</Option>
+                        <Option value="10">Samambaia</Option>
+
+                      </Select>
+                </Row>
+
+
                 <Row className='container_item' style={{ textAlign: 'left', justifyContent: 'start' }}>
                     <Text style={{ fontSize: '1rem', color: '#6D7970' }}>Idade</Text><br />
                     <DatePicker
@@ -78,6 +117,7 @@ const Planta = () => {
                 </Row>
                 <Row className='container-item' style={{ marginTop:'2rem', justifyContent: 'center' }}>
                     <Col>
+                    <Link to='/plantinhas'>
                         <button
                             type="submit"
                             style={{
@@ -93,6 +133,7 @@ const Planta = () => {
                         >
                             Adicionar
                         </button>
+                        </Link>
                     </Col>
 
                 </Row>
