@@ -13,15 +13,15 @@ import { useHistory } from 'react-router-dom';
 
 import './styles.css'
 import { ArrowLeftOutlined, DownOutlined } from '@ant-design/icons';
-import planta from "../../../assets/violatricolor.png";
-import calendar from "../../../assets/calendar_icon.svg";
-import adubagem from "../../../assets/adubagem_icon.svg";
-import vasos from "../../../assets/vasos_icon.svg";
-import clima from "../../../assets/clima_icon.svg";
+import planta from "../../../../assets/desert.png";
+import calendar from "../../../../assets/calendar_icon.svg";
+import adubagem from "../../../../assets/adubagem_icon.svg";
+import vasos from "../../../../assets/vasos_icon.svg";
+import clima from "../../../../assets/clima_icon.svg";
 import "antd/dist/antd.css";
-import MenuComponent from '../../../components/MenuComponent';
-import minhasPlantasIcon from "../../../assets/folha.svg";
-import favoritar from "../../../assets/estrela.svg";
+import MenuComponent from '../../../../components/MenuComponent';
+import minhasPlantasIcon from "../../../../assets/folha.svg";
+import favoritar from "../../../../assets/estrela.svg";
 
 const { Title, Text } = Typography;
 const { Content } = Layout;
@@ -57,14 +57,14 @@ const Planta = () => {
                 </Col>
             </Row>
             <Row className='container_item'>
-                <Title className='titulo' style={{ marginTop: "0" }}>Amor-perfeito</Title>
+                <Title className='titulo' style={{ marginTop: "0" }}>Rosa do Deserto</Title>
 
             </Row>
             <Content className="site-layout-content" style={{ display: 'block', padding: 0 }} >
                 <Row className='container_item' style={{ marginBottom: '5rem' }}>
                     <Col>
                         <Card className='card-planta-style'>
-                            <Text className='text-planta'>Tem como nome científico: Viola Tricolor</Text>
+                            <Text className='text-planta'>Tem como nome científico: Adenium obesum</Text>
                         </Card>
                         <Image
                             src={planta}
@@ -75,7 +75,8 @@ const Planta = () => {
                 </Row>
                 <Row className='container_item' style={{ padding: '0 15px', textAlign: 'justify' }}>
                     <Col>
-                        <Text className='sobre-planta'>Como o próprio nome sugere, o amor-perfeito é uma planta representante do romance, sendo considerada historicamente como símbolo da união afetiva. Suas flores são perfeitas para embelezar diversos espaços ou serem usadas para declarar amor a alguém, além de seu potencial para uso cosmético e chás.</Text>
+                        <Text className='sobre-planta'>Uma planta que une o visual de um bonsai, a resistência ao calor e flores encantadoras: essa é a Rosa do Deserto. De fácil cultivo, essa planta de beleza exótica e crescimento lento exige poucos cuidados para se desenvolver. Suas flores, já aparecem em plantas jovens, embelezando o espaço a sua volta durante meses.
+</Text>
                     </Col>
                 </Row>
                 <Row className='container_item' >
@@ -87,7 +88,8 @@ const Planta = () => {
                             backgroundColor: 'transparent'
                         }}>
                         <Panel extra={genExtra()} header="Cronograma" key="1" >
-                            <Text className='sobre-planta'>A rega deve ser realizada de duas a três vezes por semana em meses quentes e uma vez por semana em meses frios. O solo deve ficar continuamente úmido, evitando que fique encharcado.
+                            <Text className='sobre-planta'>Amante do sol e sensível à água, a Rosa do Deserto deve ser regada uma vez por semana durante o verão e a cada quinze dias durante o inverno. 
+
 </Text>
                         </Panel>
                     </Collapse>
@@ -100,7 +102,8 @@ const Planta = () => {
                             backgroundColor: 'transparent'
                         }}>
                         <Panel extra={genExtra()} header="Adubagem" key="1" >
-                            <Text className='sobre-planta'>Para um crescimento mais rápido e saudável, recomenda-se adubar a cada quinze dias com composto orgânico proveniente de húmus de minhoca.
+                            <Text className='sobre-planta'>Embora seja uma planta adaptada a solos pobres em nutrientes, a Rosa do Deserto pode se beneficiar bastante com a aplicação de adubos equilibrados ou ricos em nitrogênio. Dessa forma, uma boa estratégia pode ser variar entre adubos químicos NPK 20-10-10 e NPK 10-10-10.
+
 </Text>
                         </Panel>
                     </Collapse>
@@ -113,7 +116,8 @@ const Planta = () => {
                             backgroundColor: 'transparent'
                         }}>
                         <Panel extra={genExtra()} header="Vasos" key="1" >
-                            <Text className='sobre-planta'>O mais importante é que haja uma camada de drenagem no fundo vaso, de forma a evitar o acúmulo de água na terra. De forma complementar, a mistura de terra, adubo orgânico e areia é uma boa composição para manter a umidade e facilitar a drenagem em um substrato. As raízes do amor-perfeito, por não serem muito profundas, podem se desenvolver em vasos rasos (de 20cm de altura em mudas, por exemplo).
+                            <Text className='sobre-planta'>É indicado o uso de vasos porosos, como barro ou terracota. Eles irão ajudar a evitar o acúmulo de água, facilitando a drenagem e mantendo a terra seca. Para complementar, adicione seixos no fundo do vaso para melhorar ainda mais a drenagem.
+
 </Text>
                         </Panel>
                     </Collapse>
@@ -126,7 +130,7 @@ const Planta = () => {
                             backgroundColor: 'transparent'
                         }}>
                         <Panel extra={genExtra()} header="Clima Ideal" key="1" >
-                            <Text className='sobre-planta'>O clima subtropical e o temperado são os ideais para o desenvolvimento do amor-perfeito. A planta, embora adaptada a temperaturas frias, deve ter uma boa exposição ao sol. Recomenda-se pelo menos seis horas por dia de exposição à luz solar direta.
+                            <Text className='sobre-planta'>O clima deve ser quente e seco, típico de regiões áridas ou tropicais. A Rosa do Deserto deve ser exposta continuamente ao sol, embora tolere meia-sombra, mas nunca ao frio - que deve causar danos a ela. Logo, o ideal é que haja luz solar direta durante ao menos seis horas por dia para que ela se desenvolva de forma saudável.
 </Text>
                         </Panel>
                     </Collapse>

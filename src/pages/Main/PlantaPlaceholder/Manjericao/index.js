@@ -13,15 +13,15 @@ import { useHistory } from 'react-router-dom';
 
 import './styles.css'
 import { ArrowLeftOutlined, DownOutlined } from '@ant-design/icons';
-import planta from "../../../assets/violatricolor.png";
-import calendar from "../../../assets/calendar_icon.svg";
-import adubagem from "../../../assets/adubagem_icon.svg";
-import vasos from "../../../assets/vasos_icon.svg";
-import clima from "../../../assets/clima_icon.svg";
+import planta from "../../../../assets/manje.png";
+import calendar from "../../../../assets/calendar_icon.svg";
+import adubagem from "../../../../assets/adubagem_icon.svg";
+import vasos from "../../../../assets/vasos_icon.svg";
+import clima from "../../../../assets/clima_icon.svg";
 import "antd/dist/antd.css";
-import MenuComponent from '../../../components/MenuComponent';
-import minhasPlantasIcon from "../../../assets/folha.svg";
-import favoritar from "../../../assets/estrela.svg";
+import MenuComponent from '../../../../components/MenuComponent';
+import minhasPlantasIcon from "../../../../assets/folha.svg";
+import favoritar from "../../../../assets/estrela.svg";
 
 const { Title, Text } = Typography;
 const { Content } = Layout;
@@ -57,14 +57,14 @@ const Planta = () => {
                 </Col>
             </Row>
             <Row className='container_item'>
-                <Title className='titulo' style={{ marginTop: "0" }}>Amor-perfeito</Title>
+                <Title className='titulo' style={{ marginTop: "0" }}>Manjericão</Title>
 
             </Row>
             <Content className="site-layout-content" style={{ display: 'block', padding: 0 }} >
                 <Row className='container_item' style={{ marginBottom: '5rem' }}>
                     <Col>
                         <Card className='card-planta-style'>
-                            <Text className='text-planta'>Tem como nome científico: Viola Tricolor</Text>
+                            <Text className='text-planta'>Tem como nome científico: Ocimum basilicum</Text>
                         </Card>
                         <Image
                             src={planta}
@@ -75,7 +75,8 @@ const Planta = () => {
                 </Row>
                 <Row className='container_item' style={{ padding: '0 15px', textAlign: 'justify' }}>
                     <Col>
-                        <Text className='sobre-planta'>Como o próprio nome sugere, o amor-perfeito é uma planta representante do romance, sendo considerada historicamente como símbolo da união afetiva. Suas flores são perfeitas para embelezar diversos espaços ou serem usadas para declarar amor a alguém, além de seu potencial para uso cosmético e chás.</Text>
+                        <Text className='sobre-planta'>Com origem na Índia, o manjericão é uma erva riquíssima em uma vasta gama de nutrientes. Essa planta possui um aroma único e é utilizada desde a culinária até tratamentos terapêuticos e estéticos. Sua facilidade de plantio também contribui para o cultivo em apartamentos com boa exposição ao sol - que serão imediatamente recompensados por sua fragrância inconfundível.
+</Text>
                     </Col>
                 </Row>
                 <Row className='container_item' >
@@ -87,7 +88,8 @@ const Planta = () => {
                             backgroundColor: 'transparent'
                         }}>
                         <Panel extra={genExtra()} header="Cronograma" key="1" >
-                            <Text className='sobre-planta'>A rega deve ser realizada de duas a três vezes por semana em meses quentes e uma vez por semana em meses frios. O solo deve ficar continuamente úmido, evitando que fique encharcado.
+                            <Text className='sobre-planta'>Regue seu manjericão a cada dois ou três dias, a depender da aparência da terra: se notar que ela está seca, regue o substrato sem encharcar, uma vez que o manjericão não reage bem ao excesso de água.
+
 </Text>
                         </Panel>
                     </Collapse>
@@ -100,7 +102,7 @@ const Planta = () => {
                             backgroundColor: 'transparent'
                         }}>
                         <Panel extra={genExtra()} header="Adubagem" key="1" >
-                            <Text className='sobre-planta'>Para um crescimento mais rápido e saudável, recomenda-se adubar a cada quinze dias com composto orgânico proveniente de húmus de minhoca.
+                            <Text className='sobre-planta'>Recomenda-se que seja adicionado adubo a cada 40 dias, preferencialmente com húmus de minhoca, rico em nutrientes e propício para o cultivo orgânico. 
 </Text>
                         </Panel>
                     </Collapse>
@@ -113,7 +115,8 @@ const Planta = () => {
                             backgroundColor: 'transparent'
                         }}>
                         <Panel extra={genExtra()} header="Vasos" key="1" >
-                            <Text className='sobre-planta'>O mais importante é que haja uma camada de drenagem no fundo vaso, de forma a evitar o acúmulo de água na terra. De forma complementar, a mistura de terra, adubo orgânico e areia é uma boa composição para manter a umidade e facilitar a drenagem em um substrato. As raízes do amor-perfeito, por não serem muito profundas, podem se desenvolver em vasos rasos (de 20cm de altura em mudas, por exemplo).
+                            <Text className='sobre-planta'>O mais importante em relação aos vasos quando se trata de manjericão é implantar um bom sistema de drenagem para evitar o acúmulo de água na terra. Uma boa estratégia é colocar uma camada de pedra brita no fundo do vaso, complementando com substrato na parte superior. Vasos de tamanho superior a 20 cm de profundidade também podem contribuir para o desenvolvimento dessas plantinhas.
+
 </Text>
                         </Panel>
                     </Collapse>
@@ -126,7 +129,7 @@ const Planta = () => {
                             backgroundColor: 'transparent'
                         }}>
                         <Panel extra={genExtra()} header="Clima Ideal" key="1" >
-                            <Text className='sobre-planta'>O clima subtropical e o temperado são os ideais para o desenvolvimento do amor-perfeito. A planta, embora adaptada a temperaturas frias, deve ter uma boa exposição ao sol. Recomenda-se pelo menos seis horas por dia de exposição à luz solar direta.
+                            <Text className='sobre-planta'>O clima ideal para o manjericão é o tropical, podendo também tolerar o subtropical caso a temperatura se mantenha acima de 18 graus. Dessa forma, a planta deve permanecer em locais quentes e deve ser exposta à luz direta do sol em torno de seis horas por dia para crescer de forma saudável.
 </Text>
                         </Panel>
                     </Collapse>

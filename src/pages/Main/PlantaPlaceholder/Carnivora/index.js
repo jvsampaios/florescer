@@ -13,15 +13,15 @@ import { useHistory } from 'react-router-dom';
 
 import './styles.css'
 import { ArrowLeftOutlined, DownOutlined } from '@ant-design/icons';
-import planta from "../../../assets/violatricolor.png";
-import calendar from "../../../assets/calendar_icon.svg";
-import adubagem from "../../../assets/adubagem_icon.svg";
-import vasos from "../../../assets/vasos_icon.svg";
-import clima from "../../../assets/clima_icon.svg";
+import planta from "../../../../assets/carniv.png";
+import calendar from "../../../../assets/calendar_icon.svg";
+import adubagem from "../../../../assets/adubagem_icon.svg";
+import vasos from "../../../../assets/vasos_icon.svg";
+import clima from "../../../../assets/clima_icon.svg";
 import "antd/dist/antd.css";
-import MenuComponent from '../../../components/MenuComponent';
-import minhasPlantasIcon from "../../../assets/folha.svg";
-import favoritar from "../../../assets/estrela.svg";
+import MenuComponent from '../../../../components/MenuComponent';
+import minhasPlantasIcon from "../../../../assets/folha.svg";
+import favoritar from "../../../../assets/estrela.svg";
 
 const { Title, Text } = Typography;
 const { Content } = Layout;
@@ -57,14 +57,14 @@ const Planta = () => {
                 </Col>
             </Row>
             <Row className='container_item'>
-                <Title className='titulo' style={{ marginTop: "0" }}>Amor-perfeito</Title>
+                <Title className='titulo' style={{ marginTop: "0" }}>Planta Carnívora Dioneia</Title>
 
             </Row>
             <Content className="site-layout-content" style={{ display: 'block', padding: 0 }} >
                 <Row className='container_item' style={{ marginBottom: '5rem' }}>
                     <Col>
                         <Card className='card-planta-style'>
-                            <Text className='text-planta'>Tem como nome científico: Viola Tricolor</Text>
+                            <Text className='text-planta'>Tem como nome científico: Dionaea muscipula</Text>
                         </Card>
                         <Image
                             src={planta}
@@ -75,7 +75,8 @@ const Planta = () => {
                 </Row>
                 <Row className='container_item' style={{ padding: '0 15px', textAlign: 'justify' }}>
                     <Col>
-                        <Text className='sobre-planta'>Como o próprio nome sugere, o amor-perfeito é uma planta representante do romance, sendo considerada historicamente como símbolo da união afetiva. Suas flores são perfeitas para embelezar diversos espaços ou serem usadas para declarar amor a alguém, além de seu potencial para uso cosmético e chás.</Text>
+                        <Text className='sobre-planta'>Considerada uma das plantas mais exóticas do mundo, a planta carnívora é uma categoria absolutamente única dentre todas as existentes. Como o próprio nome sugere, esse tipo de planta obtém seus nutrientes pelo meio externo: capturando insetos ou pequenos bichos que entrem em contato com suas armadilhas vivas. A espécie em questão - e a mais conhecida - é a dioneia, que possui a aparência clássica das plantas carnívoras e é recomendada para botânicos ou pessoas experientes no cuidado de plantas devido às suas exigências constantes e peculiaridades.
+</Text>
                     </Col>
                 </Row>
                 <Row className='container_item' >
@@ -87,7 +88,7 @@ const Planta = () => {
                             backgroundColor: 'transparent'
                         }}>
                         <Panel extra={genExtra()} header="Cronograma" key="1" >
-                            <Text className='sobre-planta'>A rega deve ser realizada de duas a três vezes por semana em meses quentes e uma vez por semana em meses frios. O solo deve ficar continuamente úmido, evitando que fique encharcado.
+                            <Text className='sobre-planta'>A planta carnívora, em especial da espécie Dionaea muscipula, não deve ser regada por cima, como a maioria das plantas. Ao contrário, a rega deve ser realizada por baixo, alcançando as raízes: basta colocar o vaso dentro de um recipiente preenchido parcialmente com água, esta preferencialmente da chuva ou destilada para evitar a presença de cloro ou sais minerais que possam prejudicar a planta. Além disso, é essencial que a planta carnívora esteja sempre em um ambiente muito úmido. Por isso, verifique sempre se o substrato não está seco e se o vaso está em contato com a água.
 </Text>
                         </Panel>
                     </Collapse>
@@ -100,7 +101,8 @@ const Planta = () => {
                             backgroundColor: 'transparent'
                         }}>
                         <Panel extra={genExtra()} header="Adubagem" key="1" >
-                            <Text className='sobre-planta'>Para um crescimento mais rápido e saudável, recomenda-se adubar a cada quinze dias com composto orgânico proveniente de húmus de minhoca.
+                            <Text className='sobre-planta'>Não é necessário adubar a planta carnívora, uma vez que ela obtém seus nutrientes por meio dos insetos que capturam.
+
 </Text>
                         </Panel>
                     </Collapse>
@@ -113,7 +115,8 @@ const Planta = () => {
                             backgroundColor: 'transparent'
                         }}>
                         <Panel extra={genExtra()} header="Vasos" key="1" >
-                            <Text className='sobre-planta'>O mais importante é que haja uma camada de drenagem no fundo vaso, de forma a evitar o acúmulo de água na terra. De forma complementar, a mistura de terra, adubo orgânico e areia é uma boa composição para manter a umidade e facilitar a drenagem em um substrato. As raízes do amor-perfeito, por não serem muito profundas, podem se desenvolver em vasos rasos (de 20cm de altura em mudas, por exemplo).
+                            <Text className='sobre-planta'>Os vasos ideais para as dioneias são estreitos, fundos e de plástico. Uma dica é comprar vasos que não sejam da cor preta para reduzir a absorção de calor. Além disso, o substrato recomendado é uma mistura equilibrada de musgo sphagnum e areia.
+
 </Text>
                         </Panel>
                     </Collapse>
@@ -126,7 +129,8 @@ const Planta = () => {
                             backgroundColor: 'transparent'
                         }}>
                         <Panel extra={genExtra()} header="Clima Ideal" key="1" >
-                            <Text className='sobre-planta'>O clima subtropical e o temperado são os ideais para o desenvolvimento do amor-perfeito. A planta, embora adaptada a temperaturas frias, deve ter uma boa exposição ao sol. Recomenda-se pelo menos seis horas por dia de exposição à luz solar direta.
+                            <Text className='sobre-planta'>Climas subtropicais são os ideais para o desenvolvimento das dioneias. Elas devem ficar em um ambiente fresco e sempre úmido, embora tolere muito bem climas frios e quentes. Além disso, devem ser expostas à luz direta do sol de 5 a 8 horas por dia para crescer de forma saudável. 
+
 </Text>
                         </Panel>
                     </Collapse>

@@ -13,15 +13,15 @@ import { useHistory } from 'react-router-dom';
 
 import './styles.css'
 import { ArrowLeftOutlined, DownOutlined } from '@ant-design/icons';
-import planta from "../../../assets/violatricolor.png";
-import calendar from "../../../assets/calendar_icon.svg";
-import adubagem from "../../../assets/adubagem_icon.svg";
-import vasos from "../../../assets/vasos_icon.svg";
-import clima from "../../../assets/clima_icon.svg";
+import planta from "../../../../assets/samba.png";
+import calendar from "../../../../assets/calendar_icon.svg";
+import adubagem from "../../../../assets/adubagem_icon.svg";
+import vasos from "../../../../assets/vasos_icon.svg";
+import clima from "../../../../assets/clima_icon.svg";
 import "antd/dist/antd.css";
-import MenuComponent from '../../../components/MenuComponent';
-import minhasPlantasIcon from "../../../assets/folha.svg";
-import favoritar from "../../../assets/estrela.svg";
+import MenuComponent from '../../../../components/MenuComponent';
+import minhasPlantasIcon from "../../../../assets/folha.svg";
+import favoritar from "../../../../assets/estrela.svg";
 
 const { Title, Text } = Typography;
 const { Content } = Layout;
@@ -57,14 +57,14 @@ const Planta = () => {
                 </Col>
             </Row>
             <Row className='container_item'>
-                <Title className='titulo' style={{ marginTop: "0" }}>Amor-perfeito</Title>
+                <Title className='titulo' style={{ marginTop: "0" }}>Samambaia</Title>
 
             </Row>
             <Content className="site-layout-content" style={{ display: 'block', padding: 0 }} >
                 <Row className='container_item' style={{ marginBottom: '5rem' }}>
                     <Col>
                         <Card className='card-planta-style'>
-                            <Text className='text-planta'>Tem como nome científico: Viola Tricolor</Text>
+                            <Text className='text-planta'>Tem como nome científico: Nephrolepis exaltata</Text>
                         </Card>
                         <Image
                             src={planta}
@@ -75,7 +75,7 @@ const Planta = () => {
                 </Row>
                 <Row className='container_item' style={{ padding: '0 15px', textAlign: 'justify' }}>
                     <Col>
-                        <Text className='sobre-planta'>Como o próprio nome sugere, o amor-perfeito é uma planta representante do romance, sendo considerada historicamente como símbolo da união afetiva. Suas flores são perfeitas para embelezar diversos espaços ou serem usadas para declarar amor a alguém, além de seu potencial para uso cosmético e chás.</Text>
+                        <Text className='sobre-planta'>Conhecida por sua ancestralidade, a samambaia é uma das plantas mais antigas do planeta: ela surgiu há mais de 360 milhões de anos, antes mesmo dos próprios dinossauros. Sua exuberância é capaz de tornar qualquer ambiente mais alegre e elegante, podendo ser alavancada pelo uso de vasos suspensos ou mesmo jardins verticais.</Text>
                     </Col>
                 </Row>
                 <Row className='container_item' >
@@ -87,7 +87,7 @@ const Planta = () => {
                             backgroundColor: 'transparent'
                         }}>
                         <Panel extra={genExtra()} header="Cronograma" key="1" >
-                            <Text className='sobre-planta'>A rega deve ser realizada de duas a três vezes por semana em meses quentes e uma vez por semana em meses frios. O solo deve ficar continuamente úmido, evitando que fique encharcado.
+                            <Text className='sobre-planta'>Deve ser regada três vezes por semana. O solo deve estar sempre úmido, mas nunca encharcado para evitar que suas raízes não apodreçam. Caso o clima esteja seco e/ou muito quente, recomenda-se borrifar água em suas folhas a cada dois dias como complemento.
 </Text>
                         </Panel>
                     </Collapse>
@@ -100,7 +100,8 @@ const Planta = () => {
                             backgroundColor: 'transparent'
                         }}>
                         <Panel extra={genExtra()} header="Adubagem" key="1" >
-                            <Text className='sobre-planta'>Para um crescimento mais rápido e saudável, recomenda-se adubar a cada quinze dias com composto orgânico proveniente de húmus de minhoca.
+                            <Text className='sobre-planta'>Após 6 meses desde o plantio, deve ser feita a cada 15 dias em pequena quantidade com adubos ricos em nitrogênio.
+
 </Text>
                         </Panel>
                     </Collapse>
@@ -113,7 +114,7 @@ const Planta = () => {
                             backgroundColor: 'transparent'
                         }}>
                         <Panel extra={genExtra()} header="Vasos" key="1" >
-                            <Text className='sobre-planta'>O mais importante é que haja uma camada de drenagem no fundo vaso, de forma a evitar o acúmulo de água na terra. De forma complementar, a mistura de terra, adubo orgânico e areia é uma boa composição para manter a umidade e facilitar a drenagem em um substrato. As raízes do amor-perfeito, por não serem muito profundas, podem se desenvolver em vasos rasos (de 20cm de altura em mudas, por exemplo).
+                            <Text className='sobre-planta'>O vaso ideal para as samambaias é aquele que não absorve a umidade da terra. Vasos de fibra de coco ou de plástico são os mais recomendados.
 </Text>
                         </Panel>
                     </Collapse>
@@ -126,7 +127,8 @@ const Planta = () => {
                             backgroundColor: 'transparent'
                         }}>
                         <Panel extra={genExtra()} header="Clima Ideal" key="1" >
-                            <Text className='sobre-planta'>O clima subtropical e o temperado são os ideais para o desenvolvimento do amor-perfeito. A planta, embora adaptada a temperaturas frias, deve ter uma boa exposição ao sol. Recomenda-se pelo menos seis horas por dia de exposição à luz solar direta.
+                            <Text className='sobre-planta'>Ideal para climas tropicais e subtropicais, não tolerando o frio excessivo. Alérgica à luz solar direta, a samambaia deve ser posicionada em um local bem iluminado com luz difusa ou indireta, sendo ideal para ambientes úmidos e com pouca circulação de ar.
+
 </Text>
                         </Panel>
                     </Collapse>

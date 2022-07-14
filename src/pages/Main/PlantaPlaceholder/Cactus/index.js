@@ -13,15 +13,15 @@ import { useHistory } from 'react-router-dom';
 
 import './styles.css'
 import { ArrowLeftOutlined, DownOutlined } from '@ant-design/icons';
-import planta from "../../../assets/violatricolor.png";
-import calendar from "../../../assets/calendar_icon.svg";
-import adubagem from "../../../assets/adubagem_icon.svg";
-import vasos from "../../../assets/vasos_icon.svg";
-import clima from "../../../assets/clima_icon.svg";
+import planta from "../../../../assets/cacto.png";
+import calendar from "../../../../assets/calendar_icon.svg";
+import adubagem from "../../../../assets/adubagem_icon.svg";
+import vasos from "../../../../assets/vasos_icon.svg";
+import clima from "../../../../assets/clima_icon.svg";
 import "antd/dist/antd.css";
-import MenuComponent from '../../../components/MenuComponent';
-import minhasPlantasIcon from "../../../assets/folha.svg";
-import favoritar from "../../../assets/estrela.svg";
+import MenuComponent from '../../../../components/MenuComponent';
+import minhasPlantasIcon from "../../../../assets/folha.svg";
+import favoritar from "../../../../assets/estrela.svg";
 
 const { Title, Text } = Typography;
 const { Content } = Layout;
@@ -57,15 +57,12 @@ const Planta = () => {
                 </Col>
             </Row>
             <Row className='container_item'>
-                <Title className='titulo' style={{ marginTop: "0" }}>Amor-perfeito</Title>
+                <Title className='titulo' style={{ marginTop: "0" }}>Cactus</Title>
 
             </Row>
             <Content className="site-layout-content" style={{ display: 'block', padding: 0 }} >
                 <Row className='container_item' style={{ marginBottom: '5rem' }}>
                     <Col>
-                        <Card className='card-planta-style'>
-                            <Text className='text-planta'>Tem como nome científico: Viola Tricolor</Text>
-                        </Card>
                         <Image
                             src={planta}
                             preview={false}
@@ -75,7 +72,7 @@ const Planta = () => {
                 </Row>
                 <Row className='container_item' style={{ padding: '0 15px', textAlign: 'justify' }}>
                     <Col>
-                        <Text className='sobre-planta'>Como o próprio nome sugere, o amor-perfeito é uma planta representante do romance, sendo considerada historicamente como símbolo da união afetiva. Suas flores são perfeitas para embelezar diversos espaços ou serem usadas para declarar amor a alguém, além de seu potencial para uso cosmético e chás.</Text>
+                        <Text className='sobre-planta'>Espinhentos, resistentes e fáceis de cuidar, os mini cactos são a escolha certa para iniciantes no universo das plantas ou para aqueles que desejam enfeitar seu ambiente doméstico (ou externo) de forma prática e simples. São inúmeras espécies diferentes, embora todas compartilhem dos mesmos princípios.</Text>
                     </Col>
                 </Row>
                 <Row className='container_item' >
@@ -87,7 +84,8 @@ const Planta = () => {
                             backgroundColor: 'transparent'
                         }}>
                         <Panel extra={genExtra()} header="Cronograma" key="1" >
-                            <Text className='sobre-planta'>A rega deve ser realizada de duas a três vezes por semana em meses quentes e uma vez por semana em meses frios. O solo deve ficar continuamente úmido, evitando que fique encharcado.
+                            <Text className='sobre-planta'>Típicos de biomas quentes e desérticos, os cactos são capazes de passar um bom período de tempo sem acesso à água. Dessa forma, recomenda-se a rega em pouca quantidade para evitar acúmulos que possam ser danosos. Regue uma vez por semana em climas quentes e a cada 15 dias em climas mais frios. É importante se certificar sempre antes da rega se o substrato se encontra seco antes de iniciar o processo.
+
 </Text>
                         </Panel>
                     </Collapse>
@@ -100,7 +98,7 @@ const Planta = () => {
                             backgroundColor: 'transparent'
                         }}>
                         <Panel extra={genExtra()} header="Adubagem" key="1" >
-                            <Text className='sobre-planta'>Para um crescimento mais rápido e saudável, recomenda-se adubar a cada quinze dias com composto orgânico proveniente de húmus de minhoca.
+                            <Text className='sobre-planta'>Por serem eficientes em armazenar nutrientes por mais tempo, a adubação dos cactos pode ser feita em intervalos maiores. Recomenda-se o adubo orgânico misturado ao substrato ou o uso de adubo químico, como o NPK, na forma diluída. 
 </Text>
                         </Panel>
                     </Collapse>
@@ -113,7 +111,8 @@ const Planta = () => {
                             backgroundColor: 'transparent'
                         }}>
                         <Panel extra={genExtra()} header="Vasos" key="1" >
-                            <Text className='sobre-planta'>O mais importante é que haja uma camada de drenagem no fundo vaso, de forma a evitar o acúmulo de água na terra. De forma complementar, a mistura de terra, adubo orgânico e areia é uma boa composição para manter a umidade e facilitar a drenagem em um substrato. As raízes do amor-perfeito, por não serem muito profundas, podem se desenvolver em vasos rasos (de 20cm de altura em mudas, por exemplo).
+                            <Text className='sobre-planta'>Os cactos não podem ser expostos a uma quantidade excessiva de água. Por isso, os vasos devem ser constituídos de material que absorva a umidade do solo, como o barro, a cerâmica ou o cimento. Além disso, é importante um bom sistema de drenagem: misture areia, cascalho e terra na mesma proporção.
+
 </Text>
                         </Panel>
                     </Collapse>
@@ -126,7 +125,8 @@ const Planta = () => {
                             backgroundColor: 'transparent'
                         }}>
                         <Panel extra={genExtra()} header="Clima Ideal" key="1" >
-                            <Text className='sobre-planta'>O clima subtropical e o temperado são os ideais para o desenvolvimento do amor-perfeito. A planta, embora adaptada a temperaturas frias, deve ter uma boa exposição ao sol. Recomenda-se pelo menos seis horas por dia de exposição à luz solar direta.
+                            <Text className='sobre-planta'>Ideal para climas quentes e secos. Embora possa ficar em ambientes de luz indireta, recomenda-se manter os cactos em locais com forte incidência de luz solar direta, o que favorece o crescimento e a beleza dessas plantas.
+
 </Text>
                         </Panel>
                     </Collapse>
