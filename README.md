@@ -1,7 +1,19 @@
+# Florescer
+
+<h3 align="left">
+
 Aplicativo móvel para catalogar e ensinar os usuários a cuidarem de diferentes espécies de plantas de forma interativa e personalizada.
 
-Acesse o vídeo de explicação do projeto em: https://bit.ly/florescerapp
+</h3>
 
+Video explicando o projeto: https://bit.ly/florescerapp
+
+## **:computer: TECNOLOGIAS**
+
+  - **ReactJs**
+  - **Javascript**
+  - **NodeJs**
+  - **Firebase**
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
