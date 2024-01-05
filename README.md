@@ -6,6 +6,7 @@ Aplicativo móvel para catalogar e ensinar os usuários a cuidarem de diferentes
 
 </h3>
 
+Acesse em: https://main--florescerapp.netlify.app/
 Video explicando o projeto: https://bit.ly/florescerapp
 
 ## **:computer: TECNOLOGIAS**
